@@ -17,6 +17,9 @@ ok?
 ## License
 This work is licensed under the **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)** License. This license states that you may not use the work for commercial purposes and may not distribute modified versions.
 
+## Credits
+- **Created by:** FFWeath
+- **Published by:** XrousDev
 
 
 
