@@ -1,7 +1,5 @@
 # Zero To ETH-Zurich
 
-## **Free to use, but not to modify or sell**
-
 A comprehensive study guide and question bank series for students preparing for ETH Zurich.
 
 ## About the Project
@@ -12,6 +10,8 @@ This project is a 4-part PDF series created with the assistance of AI tools to h
 - **Part 2:** Physics (electricity, magnetism, thermodynamics, waves), biology, chemistry, German.
 - **Part 3:** Advanced mathematics, advanced physics, and German C1 level.
 - **Part 4:** Mock exams and exam strategies.
+
+## **Free to use, but not to modify or sell**
 
 ## License
 This work is licensed under the **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)** License. This license states that you may not use the work for commercial purposes and may not distribute modified versions.
