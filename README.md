@@ -1,5 +1,7 @@
 # Zero To ETH-Zurich
 
+## **Free to use, but not to modify or sell**
+
 A comprehensive study guide and question bank series for students preparing for ETH Zurich.
 
 ## About the Project
@@ -16,4 +18,4 @@ This work is licensed under the **Creative Commons Attribution-NonCommercial-NoD
 
 
 
-## Free to use, but not to modify or sell
+
