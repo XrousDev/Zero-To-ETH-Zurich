@@ -13,3 +13,7 @@ This project is a 4-part PDF series created with the assistance of AI tools to h
 
 ## License
 This work is licensed under the **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)** License. This license states that you may not use the work for commercial purposes and may not distribute modified versions.
+
+
+
+## Free to use, but not to modify or sell
