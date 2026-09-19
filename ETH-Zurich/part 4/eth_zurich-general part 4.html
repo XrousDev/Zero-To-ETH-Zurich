@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ETH ZÜRICH 5-YEAR PREPARATION GUIDE AND QUESTION BANK – PART 4</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true }, options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] } };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+:root { --eth-blue: #00305e; --eth-light-blue: #0072c6; --bg-color: #f4f6f8; --text-color: #333; --border-color: #ddd; --grid-line: #b8d4e8; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: var(--text-color); line-height: 1.4; background-color: #555; padding: 20px; }
+.document { max-width: 210mm; margin: 0 auto; background: #fff; box-shadow: 0 0 15px rgba(0,0,0,0.2); counter-reset: page; }
+.page { padding: 10mm 15mm; position: relative; page-break-after: always; break-after: page; }
+.page:last-child { page-break-after: auto; break-after: auto; }
+.page::after { content: counter(page); counter-increment: page; position: absolute; bottom: 5mm; right: 10mm; font-size: 10px; color: #888; }
+.cover { min-height: 250mm; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.cover::after { content: none; }
+.cover h1 { font-size: 2.1em; color: var(--eth-blue); margin-bottom: 10px; border-bottom: 3px solid var(--eth-light-blue); padding-bottom: 10px; }
+.cover h2 { font-size: 1.2em; color: var(--eth-light-blue); margin-bottom: 40px; font-weight: normal; }
+.cover .meta { font-size: 1em; }
+h1, h2, h3, h4 { color: var(--eth-blue); }
+h1 { border-bottom: 2px solid var(--eth-blue); padding-bottom: 4px; font-size: 1.45em; margin-bottom: 10px; }
+h2 { font-size: 1.15em; margin-top: 12px; margin-bottom: 6px; }
+h3 { font-size: 1em; color: var(--eth-light-blue); margin-top: 10px; margin-bottom: 5px; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 10px; font-size: 0.85em; }
+th, td { border: 1px solid var(--border-color); padding: 4px 6px; text-align: left; vertical-align: top; }
+th { background-color: var(--eth-blue); color: #fff; }
+.print-btn { position: fixed; top: 20px; right: 20px; background: #d9381e; color: #fff; border: none; padding: 10px 16px; font-size: 14px; font-weight: bold; cursor: pointer; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); z-index: 1000; }
+.print-btn:hover { background: #b02a15; }
+.q-box { background: var(--bg-color); border-left: 4px solid var(--eth-light-blue); padding: 8px 10px; margin-bottom: 6px; border-radius: 0 5px 5px 0; }
+.sol-box { border: 1px dashed var(--border-color); padding: 7px 10px; margin-bottom: 6px; background: #fafafa; font-size: 0.85em; }
+.grid-area { height: 26mm; margin-bottom: 10px; border: 1px solid var(--grid-line); background-color: #ffffff; background-image: linear-gradient(to right, var(--grid-line) 1px, transparent 1px), linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px); background-size: 5mm 5mm; background-position: 0 0; position: relative; }
+.grid-area::before { content: "✍️ Working space"; position: absolute; top: 1mm; left: 2mm; font-size: 8px; color: #7a9bbf; }
+.question-block { break-inside: avoid; page-break-inside: avoid; display: block; margin-bottom: 8px; }
+.badge { display: inline-block; padding: 2px 6px; border-radius: 10px; font-size: 0.7em; font-weight: bold; margin-right: 4px; margin-bottom: 4px; }
+.badge.hard { background: #ffcccc; color: #990000; }
+.badge.med { background: #fff0cc; color: #996600; }
+.badge.easy { background: #cce6ff; color: #004080; }
+.badge.topic { background: var(--eth-blue); color: #fff; }
+.badge.de { background: #e2d4f0; color: #4a1e80; }
+.badge.exam { background: #d9381e; color: #fff; }
+.q-text { margin-bottom: 4px; font-size: 0.9em; }
+.tip { background: #e6f0fa; border-left: 3px solid var(--eth-blue); padding: 5px 9px; margin-top: 6px; font-size: 0.82em; }
+.series-warning { background: #fff8e1; border-left: 5px solid #f0a500; padding: 14px; margin: 10px 0; border-radius: 0 8px 8px 0; }
+.series-warning h2 { color: #b37400; margin-top: 0; }
+.editable-hint { font-size: 0.82em; color: #777; font-style: italic; margin-bottom: 6px; }
+[contenteditable="true"] { background: #fdfdfd; border-bottom: 1px dotted #bbb; min-height: 16px; padding: 2px; }
+[contenteditable="true"]:focus { background: #f0f8ff; outline: none; }
+.exam-header { background: #d9381e; color: #fff; padding: 8px 13px; border-radius: 5px; margin-bottom: 10px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
+.exam-header .time { font-size: 0.95em; }
+ul, ol { padding-left: 18px; margin-bottom: 6px; }
+p { margin-bottom: 6px; }
+@page { size: A4; margin: 10mm; }
+@media print {
+    body { background: #fff; padding: 0; }
+    .document { box-shadow: none; max-width: 100%; margin: 0; }
+    .print-btn { display: none; }
+    .page { padding: 0; page-break-after: always; break-after: page; }
+    .page:last-child { page-break-after: auto; break-after: auto; }
+    .q-box, .sol-box, .grid-area, .question-block, .series-warning, .exam-header { break-inside: avoid; page-break-inside: avoid; }
+    .grid-area { background-color: #ffffff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    [contenteditable="true"] { background: transparent; border-bottom: 1px dotted #bbb; }
+    h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
+}
+</style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+
+<div class="document">
+
+<!-- COVER -->
+<div class="page cover">
+    <h1>ETH ZÜRICH 5-YEAR PREPARATION GUIDE AND QUESTION BANK</h1>
+    <h2>PART 4: Final Mock Exams, Exam Strategies &amp; 40 Questions — The Final Level</h2>
+    <div class="meta">
+        <p><strong>Author:</strong> FF_Weath</p>
+        <p><strong>Date:</strong> September 2026</p>
+        <p><em>Series Book 4 — The Final Chapter</em></p>
+        <p style="margin-top: 30px; font-style: italic;">"The journey ends here. The exam begins now."</p>
+    </div>
+</div>
+
+<!-- SERIES WARNING -->
+<div class="page">
+    <div class="series-warning">
+        <h2>⚠️ This is the Final Part of the Series</h2>
+        <p>This file is the <strong>4th and final part</strong> of the <strong>ETH Zürich 5-Year Preparation Guide and Question Bank</strong> series. The complete series:</p>
+        <ul>
+            <li><strong>Part 1:</strong> General tactics, study plan, 5-year roadmap, mathematics and foundational physics.</li>
+            <li><strong>Part 2:</strong> Physics (electricity, magnetism, thermodynamics, waves), biology, chemistry, German language.</li>
+            <li><strong>Part 3:</strong> Advanced mathematics, advanced physics, German C1 academic reading/writing.</li>
+            <li><strong>Part 4 (this book):</strong> Final mock exams, exam strategies, time management, and 40 comprehensive exam-style questions across all subjects.</li>
+        </ul>
+        <p><strong>Recommendation:</strong> Complete Parts 1–3 before starting this final part.</p>
+        <p><strong>Final Advice:</strong> The ETH Zürich entrance exam is about calm, structured, and disciplined thinking under pressure. Trust the preparation you have done.</p>
+    </div>
+</div>
+
+<!-- TOC -->
+<div class="page">
+    <h1>Table of Contents</h1>
+    <ul>
+        <li><strong>Section 1:</strong> Personal Study Plan &amp; Final Checklist (Editable)</li>
+        <li><strong>Section 2:</strong> Exam Strategies &amp; Time Management</li>
+        <li><strong>Section 3:</strong> Mock Exam 1 — Mathematics &amp; Physics (Q1–Q10)</li>
+        <li><strong>Section 4:</strong> Mock Exam 2 — Physics, Chemistry &amp; Biology (Q11–Q20)</li>
+        <li><strong>Section 5:</strong> Mock Exam 3 — Mathematics, Probability &amp; German (Q21–Q30)</li>
+        <li><strong>Section 6:</strong> Final Mixed Challenge — All Subjects (Q31–Q40)</li>
+        <li><strong>Answer Key:</strong> Q1–Q40</li>
+        <li><strong>Last Page:</strong> Final Words, References &amp; Copyright Notice</li>
+    </ul>
+</div>
+
+<!-- SECTION 1: PERSONAL PLAN -->
+<div class="page">
+    <h1>Section 1: Your Personal Study Plan &amp; Final Checklist</h1>
+    <p class="editable-hint">This section is yours. Click any cell and type.</p>
+
+    <h3>My Final Week Schedule</h3>
+    <table>
+        <thead><tr><th>Day</th><th>Focus</th><th>Task</th><th>Time</th></tr></thead>
+        <tbody>
+            <tr><td contenteditable="true">Monday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">60 min</td></tr>
+            <tr><td contenteditable="true">Tuesday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">60 min</td></tr>
+            <tr><td contenteditable="true">Wednesday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">60 min</td></tr>
+            <tr><td contenteditable="true">Thursday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">60 min</td></tr>
+            <tr><td contenteditable="true">Friday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">60 min</td></tr>
+            <tr><td contenteditable="true">Saturday</td><td contenteditable="true">Mock Exam</td><td contenteditable="true">Full timed simulation</td><td contenteditable="true">3 h</td></tr>
+            <tr><td contenteditable="true">Sunday</td><td contenteditable="true">Rest</td><td contenteditable="true">Light review only</td><td contenteditable="true">—</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Final Checklist (Tick before the exam)</h3>
+    <table>
+        <thead><tr><th style="width:60%;">Item</th><th style="width:40%;">Done?</th></tr></thead>
+        <tbody>
+            <tr><td>All Part 1–4 questions solved at least once</td><td contenteditable="true">☐</td></tr>
+            <tr><td>Error Log reviewed — no repeated mistakes</td><td contenteditable="true">☐</td></tr>
+            <tr><td>Full mock exam done under timed conditions</td><td contenteditable="true">☐</td></tr>
+            <tr><td>German C1 writing practiced (Erörterung + Zusammenfassung)</td><td contenteditable="true">☐</td></tr>
+            <tr><td>Formula sheet memorized (math + physics)</td><td contenteditable="true">☐</td></tr>
+            <tr><td>Sleep schedule adjusted to exam days</td><td contenteditable="true">☐</td></tr>
+            <tr><td>Documents &amp; ID prepared (if applicable)</td><td contenteditable="true">☐</td></tr>
+            <tr><td>Mental preparation: calm, focused, ready</td><td contenteditable="true">☐</td></tr>
+        </tbody>
+    </table>
+
+    <h3>My Notes</h3>
+    <div class="grid-area" style="height: 50mm;"></div>
+</div>
+
+<!-- SECTION 2: EXAM STRATEGIES -->
+<div class="page">
+    <h1>Section 2: Exam Strategies &amp; Time Management</h1>
+
+    <h3>1. Before the Exam</h3>
+    <ul>
+        <li><strong>Sleep:</strong> At least 7–8 hours the night before. No all-nighters.</li>
+        <li><strong>Nutrition:</strong> Light breakfast, water bottle. Avoid heavy food.</li>
+        <li><strong>Materials:</strong> Pencils, eraser, ruler, calculator (if allowed), ID.</li>
+        <li><strong>Arrive early:</strong> 20–30 minutes before, to settle in and avoid panic.</li>
+    </ul>
+
+    <h3>2. During the Exam — Time Management</h3>
+    <table>
+        <thead><tr><th>Phase</th><th>Time</th><th>Strategy</th></tr></thead>
+        <tbody>
+            <tr><td>Read-through</td><td>5 min</td><td>Scan all questions. Mark easy / medium / hard.</td></tr>
+            <tr><td>Easy questions first</td><td>30% of time</td><td>Secure guaranteed points. Build confidence.</td></tr>
+            <tr><td>Medium questions</td><td>40% of time</td><td>Main bulk of the exam.</td></tr>
+            <tr><td>Hard questions</td><td>20% of time</td><td>Attempt only if easy/medium are done.</td></tr>
+            <tr><td>Review</td><td>10% of time</td><td>Check units, signs, arithmetic, skipped parts.</td></tr>
+        </tbody>
+    </table>
+
+    <h3>3. If You Get Stuck</h3>
+    <ul>
+        <li><strong>Move on:</strong> Don't waste more than 5 minutes on one question.</li>
+        <li><strong>Write what you know:</strong> Partial credit is real. Write the formula, approach, first step.</li>
+        <li><strong>Draw a diagram:</strong> Even a rough sketch can unlock the solution.</li>
+        <li><strong>Check units:</strong> Often a dimensional analysis reveals the mistake.</li>
+    </ul>
+
+    <h3>4. Oral Exam (Mündliche Prüfung)</h3>
+    <ul>
+        <li><strong>Narrate your thinking:</strong> The examiner wants to hear your reasoning.</li>
+        <li><strong>Speak in complete sentences (German/English):</strong> "First, I will resolve the forces into their components…"</li>
+        <li><strong>Self-correct aloud:</strong> "Wait, my unit check fails here — I must have dropped a factor."</li>
+    </ul>
+
+    <h3>5. After the Exam</h3>
+    <ul>
+        <li>Do NOT compare answers with others immediately.</li>
+        <li>Write down what felt difficult while it's fresh.</li>
+        <li>Rest. The next subject needs your energy too.</li>
+    </ul>
+</div>
+
+<!-- SECTION 3: MOCK EXAM 1 -->
+<div class="page">
+    <div class="exam-header">
+        <span>📝 MOCK EXAM 1: Mathematics &amp; Physics</span>
+        <span class="time">⏱️ 60 minutes</span>
+    </div>
+    <h1>Section 3: Mock Exam 1 (Q1–Q10)</h1>
+    <p><em>Time yourself. No notes. No calculator unless allowed.</em></p>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q1</span> <span class="badge med">Medium</span> <span class="badge">Calculus</span> <span class="badge">6m</span>
+            <div class="q-text"><span class="lang">EN:</span> Find $\frac{dy}{dx}$ if $y = \ln(\cos(x)) + e^{3x}\sin(x)$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Bestimmen Sie $\frac{dy}{dx}$ für $y = \ln(\cos(x)) + e^{3x}\sin(x)$.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> Chain rule + product rule.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $-\tan(x) + e^{3x}(3\sin(x) + \cos(x))$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q2</span> <span class="badge hard">Hard</span> <span class="badge">Integration</span> <span class="badge">8m</span>
+            <div class="q-text"><span class="lang">EN:</span> Evaluate $\int_0^1 \frac{2x}{x^2+1}\,dx$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Berechnen Sie $\int_0^1 \frac{2x}{x^2+1}\,dx$.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> Substitution $u = x^2 + 1$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\ln 2$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q3</span> <span class="badge hard">Hard</span> <span class="badge">Vectors</span> <span class="badge">8m</span>
+            <div class="q-text"><span class="lang">EN:</span> Given $\vec{a} = (2, -1, 3)$ and $\vec{b} = (1, 4, -2)$, find $\vec{a} \times \vec{b}$ and the angle between them.</div>
+            <div class="q-text"><span class="lang">DE:</span> Für $\vec{a} = (2, -1, 3)$ und $\vec{b} = (1, 4, -2)$: Kreuzprodukt und Winkel.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\vec{a}\times\vec{b} = (-10, 7, 9)$; $\cos\theta = \frac{-8}{\sqrt{14}\sqrt{21}}$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q4</span> <span class="badge med">Medium</span> <span class="badge">Kinematics</span> <span class="badge">8m</span>
+            <div class="q-text"><span class="lang">EN:</span> A ball is thrown upward with initial velocity 15 m/s. Find the maximum height and total time in the air ($g = 10$ m/s²).</div>
+            <div class="q-text"><span class="lang">DE:</span> Ein Ball wird mit 15 m/s nach oben geworfen. Maximale Höhe und Gesamtflugzeit ($g = 10$ m/s²).</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $h_{max} = 11.25$ m, $t = 3$ s.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q5</span> <span class="badge hard">Hard</span> <span class="badge">Energy</span> <span class="badge">8m</span>
+            <div class="q-text"><span class="lang">EN:</span> A 3 kg block slides down a rough incline ($\theta = 45°$, $\mu_k = 0.3$) from a height of 2 m. Find its speed at the bottom.</div>
+            <div class="q-text"><span class="lang">DE:</span> Ein 3 kg Block rutscht eine raue schiefe Ebene hinab ($\theta = 45°$, $\mu_k = 0.3$) aus 2 m Höhe. Geschwindigkeit unten?</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> Use energy: $mgh - \mu mg\cos\theta \cdot d = \frac{1}{2}mv^2$. With $d = h/\sin\theta$, $v \approx 4.8$ m/s.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q6</span> <span class="badge med">Medium</span> <span class="badge">Circuits</span> <span class="badge">6m</span>
+            <div class="q-text"><span class="lang">EN:</span> Two resistors $R_1 = 6\,\Omega$ and $R_2 = 3\,\Omega$ are in parallel, connected to a 12 V battery. Find total current and power on $R_1$.</div>
+            <div class="q-text"><span class="lang">DE:</span> $R_1 = 6\,\Omega$, $R_2 = 3\,\Omega$ parallel, 12 V. Gesamtstrom und Leistung an $R_1$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $R_{eq} = 2\,\Omega$, $I = 6$ A, $P_1 = 24$ W.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q7</span> <span class="badge hard">Hard</span> <span class="badge">Optimization</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> A box with a square base (side $x$) and no lid has volume 32 m³. Find the dimensions that minimize the surface area.</div>
+            <div class="q-text"><span class="lang">DE:</span> Eine offene Kiste mit quadratischer Grundfläche ($x$) hat Volumen 32 m³. Minimieren Sie die Oberfläche.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $x = 4$ m, height $h = 2$ m. $SA_{min} = 48$ m².</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q8</span> <span class="badge hard">Hard</span> <span class="badge">Magnetic</span> <span class="badge">8m</span>
+            <div class="q-text"><span class="lang">EN:</span> A wire of length 0.5 m carrying 4 A is placed perpendicular to a magnetic field of 0.3 T. Find the force on the wire.</div>
+            <div class="q-text"><span class="lang">DE:</span> Ein 0.5 m langer Draht mit 4 A senkrecht zu $B = 0.3$ T. Kraft?</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $F = BIL = 0.6$ N.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q9</span> <span class="badge med">Medium</span> <span class="badge">Complex</span> <span class="badge">6m</span>
+            <div class="q-text"><span class="lang">EN:</span> Compute $(1 + i)^4$ and express the result in $a + bi$ form.</div>
+            <div class="q-text"><span class="lang">DE:</span> Berechnen Sie $(1 + i)^4$ in der Form $a + bi$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $= -4$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q10</span> <span class="badge hard">Hard</span> <span class="badge">Series</span> <span class="badge">8m</span>
+            <div class="q-text"><span class="lang">EN:</span> Determine whether $\sum_{n=1}^{\infty} \frac{2^n}{n!}$ converges. If so, find its sum.</div>
+            <div class="q-text"><span class="lang">DE:</span> Konvergiert $\sum_{n=1}^{\infty} \frac{2^n}{n!}$? Bestimmen Sie ggf. die Summe.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> Recall the exponential series $e^x = \sum x^n/n!$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> Converges; sum $= e^2 - 1$.</div>
+        <div class="grid-area"></div>
+    </div>
+</div>
+
+<!-- SECTION 4: MOCK EXAM 2 -->
+<div class="page">
+    <div class="exam-header">
+        <span>📝 MOCK EXAM 2: Physics, Chemistry &amp; Biology</span>
+        <span class="time">⏱️ 55 minutes</span>
+    </div>
+    <h1>Section 4: Mock Exam 2 (Q11–Q20)</h1>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q11</span> <span class="badge med">Medium</span> <span class="badge">Thermodynamics</span> <span class="badge">6m</span>
+            <div class="q-text"><span class="lang">EN:</span> An ideal gas at 2 atm and 300 K occupies 5 L. It expands isothermally to 15 L. Find the final pressure.</div>
+            <div class="q-text"><span class="lang">DE:</span> Ideales Gas bei 2 atm und 300 K, 5 L. Isotherme Expansion auf 15 L. Enddruck?</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $P_2 = 2/3$ atm $\approx 0.67$ atm.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q12</span> <span class="badge hard">Hard</span> <span class="badge">Optics</span> <span class="badge">8m</span>
+            <div class="q-text"><span class="lang">EN:</span> Light passes from glass ($n = 1.5$) to air. Find the critical angle for total internal reflection.</div>
+            <div class="q-text"><span class="lang">DE:</span> Licht von Glas ($n = 1.5$) in Luft. Kritischer Winkel?</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\sin\theta_c = 1/1.5 \Rightarrow \theta_c \approx 41.8°$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q13</span> <span class="badge hard">Hard</span> <span class="badge">Atomic</span> <span class="badge">8m</span>
+            <div class="q-text"><span class="lang">EN:</span> Calculate the energy of a photon with wavelength 500 nm in eV. ($h = 6.63 \cdot 10^{-34}$ J·s, $c = 3 \cdot 10^8$ m/s, $1$ eV $= 1.6 \cdot 10^{-19}$ J)</div>
+            <div class="q-text"><span class="lang">DE:</span> Energie eines Photons mit $\lambda = 500$ nm in eV.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $E \approx 2.49$ eV.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q14</span> <span class="badge hard">Hard</span> <span class="badge">Chemistry</span> <span class="badge">7m</span>
+            <div class="q-text"><span class="lang">EN:</span> Balance the following redox reaction in acidic solution: $\text{MnO}_4^- + \text{Fe}^{2+} \to \text{Mn}^{2+} + \text{Fe}^{3+}$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Redox-Gleichung in saurer Lösung ausgleichen.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\text{MnO}_4^- + 5\text{Fe}^{2+} + 8\text{H}^+ \to \text{Mn}^{2+} + 5\text{Fe}^{3+} + 4\text{H}_2\text{O}$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q15</span> <span class="badge med">Medium</span> <span class="badge">Chemistry</span> <span class="badge">6m</span>
+            <div class="q-text"><span class="lang">EN:</span> Calculate the molarity of a solution containing 5.85 g of NaCl in 500 mL of solution. ($M_{NaCl} = 58.5$ g/mol)</div>
+            <div class="q-text"><span class="lang">DE:</span> Molarität: 5.85 g NaCl in 500 mL.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $0.2$ M.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q16</span> <span class="badge med">Medium</span> <span class="badge">Biology</span> <span class="badge">6m</span>
+            <div class="q-text"><span class="lang">EN:</span> Explain the role of ATP in cellular processes and why it is called the "energy currency" of the cell.</div>
+            <div class="q-text"><span class="lang">DE:</span> Rolle von ATP in Zellprozessen.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> ATP stores and transfers energy; hydrolysis to ADP + Pi releases usable energy for cellular work.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q17</span> <span class="badge hard">Hard</span> <span class="badge">Biology</span> <span class="badge">8m</span>
+            <div class="q-text"><span class="lang">EN:</span> A cross between two heterozygous tall plants (Tt) produces 400 offspring. Predict how many will be short. (T = tall dominant, t = short recessive)</div>
+            <div class="q-text"><span class="lang">DE:</span> Kreuzung zweier heterozygoter großer Pflanzen (Tt), 400 Nachkommen. Wie viele klein?</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> 25% short → 100 short offspring.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q18</span> <span class="badge med">Medium</span> <span class="badge">Physics</span> <span class="badge">6m</span>
+            <div class="q-text"><span class="lang">EN:</span> A wave has frequency 200 Hz and wavelength 1.5 m. What is the period and speed?</div>
+            <div class="q-text"><span class="lang">DE:</span> Welle mit 200 Hz und 1.5 m. Periode und Geschwindigkeit?</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $T = 0.005$ s; $v = 300$ m/s.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q19</span> <span class="badge hard">Hard</span> <span class="badge">Chemistry</span> <span class="badge">8m</span>
+            <div class="q-text"><span class="lang">EN:</span> Explain the difference between an endothermic and an exothermic reaction. Give one example of each.</div>
+            <div class="q-text"><span class="lang">DE:</span> Unterschied zwischen endothermer und exothermer Reaktion. Je ein Beispiel.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> Exothermic releases heat (combustion); endothermic absorbs heat (photosynthesis, melting ice).</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q20</span> <span class="badge hard">Hard</span> <span class="badge">Mixed</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> In a population of 1000 individuals, 160 show a recessive trait. Using Hardy–Weinberg, find the allele frequencies $p$ and $q$, and the number of heterozygous carriers.</div>
+            <div class="q-text"><span class="lang">DE:</span> 1000 Individuen, 160 mit rezessivem Merkmal. Hardy–Weinberg: $p$, $q$, Anzahl heterozygoter Träger.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $q^2 = 160/1000 = 0.16$, $q = 0.4$, $p = 0.6$, $2pq = 0.48$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $q = 0.4$, $p = 0.6$, heterozygotes $= 480$.</div>
+        <div class="grid-area"></div>
+    </div>
+</div>
+
+<!-- SECTION 5: MOCK EXAM 3 -->
+<div class="page">
+    <div class="exam-header">
+        <span>📝 MOCK EXAM 3: Mathematics, Probability &amp; German</span>
+        <span class="time">⏱️ 60 minutes</span>
+    </div>
+    <h1>Section 5: Mock Exam 3 (Q21–Q30)</h1>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q21</span> <span class="badge hard">Hard</span> <span class="badge">Calculus</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> Find the area between the curves $y = x^2$ and $y = x + 2$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Fläche zwischen $y = x^2$ und $y = x + 2$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> Intersections at $x = -1, 2$. Area $= \int_{-1}^{2}(x+2-x^2)dx = 4.5$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q22</span> <span class="badge med">Medium</span> <span class="badge">Probability</span> <span class="badge">6m</span>
+            <div class="q-text"><span class="lang">EN:</span> A bag contains 5 red, 3 blue, and 2 green balls. Two balls are drawn without replacement. Find the probability both are red.</div>
+            <div class="q-text"><span class="lang">DE:</span> 5 rot, 3 blau, 2 grün. Zwei Kugeln ohne Zurücklegen. Wahrscheinlichkeit beide rot?</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\frac{5}{10}\cdot\frac{4}{9} = \frac{2}{9} \approx 0.222$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q23</span> <span class="badge hard">Hard</span> <span class="badge">Probability</span> <span class="badge">8m</span>
+            <div class="q-text"><span class="lang">EN:</span> A test for a disease has 95% sensitivity and 90% specificity. If prevalence is 2%, find $P(\text{disease} | \text{positive})$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Test mit 95% Sensitivität, 90% Spezifität. Prävalenz 2%. $P(\text{krank} | \text{positiv})$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $P(+) = 0.019 + 0.098 = 0.117$; $P(D|+) \approx 0.162$ (%16.2).</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q24</span> <span class="badge med">Medium</span> <span class="badge">Linear Algebra</span> <span class="badge">7m</span>
+            <div class="q-text"><span class="lang">EN:</span> Solve the system: $2x + 3y = 7$, $x - y = 1$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Lösen Sie das Gleichungssystem.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $x = 2$, $y = 1$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q25</span> <span class="badge hard">Schwer</span> <span class="badge de">DE</span> <span class="badge">Grammatik</span> <span class="badge">6m</span>
+            <div class="q-text">Ergänzen Sie das richtige Verb im Konjunktiv II:</div>
+            <div class="q-text">„Wenn er Zeit ___, ___ er uns helfen.“</div>
+            <div class="q-text">A) hätte / würde &nbsp; B) hat / wird &nbsp; C) hatte / wurde &nbsp; D) hätte / werde</div>
+        </div>
+        <div class="sol-box"><strong>Lösung:</strong> A) hätte / würde.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q26</span> <span class="badge hard">Schwer</span> <span class="badge de">DE</span> <span class="badge">Leseverstehen</span> <span class="badge">10m</span>
+            <div class="q-text">Lesen Sie den Text und antworten Sie:</div>
+            <div class="q-text"><em>„Die Globalisierung hat den internationalen Handel gefördert, aber auch zu wachsender Ungleichheit geführt. Während einige Länder von günstigeren Produkten und neuen Märkten profitieren, leiden andere unter Arbeitsplatzverlusten und Umweltbelastungen.“</em></div>
+            <div class="q-text"><strong>Frage:</strong> Welche zwei entgegengesetzten Wirkungen der Globalisierung nennt der Text?</div>
+        </div>
+        <div class="sol-box"><strong>Lösung:</strong> Förderung des Handels vs. wachsende Ungleichheit und Umweltbelastung.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q27</span> <span class="badge hard">Schwer</span> <span class="badge de">DE</span> <span class="badge">Erörterung</span> <span class="badge">20m</span>
+            <div class="q-text">Schreiben Sie eine Erörterung (ca. 200 Wörter): <em>„Sollten Universitäten kostenlos sein?“</em> Einleitung, Pro, Contra, Schluss mit eigener Meinung.</div>
+        </div>
+        <div class="sol-box"><strong>Hinweis:</strong> Freies Schreiben.</div>
+        <div class="grid-area" style="height: 100mm;"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q28</span> <span class="badge med">Medium</span> <span class="badge">Statistics</span> <span class="badge">6m</span>
+            <div class="q-text"><span class="lang">EN:</span> The heights of 500 students are normally distributed with $\mu = 170$ cm and $\sigma = 8$ cm. Approximately how many students are taller than 182 cm?</div>
+            <div class="q-text"><span class="lang">DE:</span> 500 Studenten, $\mu = 170$, $\sigma = 8$. Wie viele größer als 182 cm?</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $z = (182-170)/8 = 1.5$, $P(Z>1.5) \approx 0.0668$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\approx 33$ students.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q29</span> <span class="badge hard">Hard</span> <span class="badge">Optimization</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> A cylindrical can must hold 500 mL. Find the radius and height that minimize the material used.</div>
+            <div class="q-text"><span class="lang">DE:</span> Zylindrische Dose, 500 mL. Minimieren Sie das Material.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $h = 2r$, $r \approx 4.3$ cm, $h \approx 8.6$ cm.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q30</span> <span class="badge hard">Hard</span> <span class="badge">Calculus</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> Evaluate $\int_0^{\pi} \sin^2(x)\,dx$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Berechnen Sie $\int_0^{\pi} \sin^2(x)\,dx$.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> Use $\sin^2(x) = \frac{1 - \cos(2x)}{2}$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\frac{\pi}{2}$.</div>
+        <div class="grid-area"></div>
+    </div>
+</div>
+
+<!-- SECTION 6: FINAL MIXED CHALLENGE -->
+<div class="page">
+    <div class="exam-header">
+        <span>🏆 FINAL MIXED CHALLENGE: All Subjects</span>
+        <span class="time">⏱️ 60 minutes</span>
+    </div>
+    <h1>Section 6: Final Mixed Challenge (Q31–Q40)</h1>
+    <p><em>The final stretch. Combine everything you have learned.</em></p>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q31</span> <span class="badge hard">Hard</span> <span class="badge">Mixed</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> Solve the differential equation $\frac{dy}{dx} = y \cos(x)$ with $y(0) = 2$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Lösen Sie $\frac{dy}{dx} = y \cos(x)$ mit $y(0) = 2$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $y = 2 e^{\sin(x)}$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q32</span> <span class="badge hard">Hard</span> <span class="badge">Mixed</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> A projectile is launched at 25 m/s at 60°. Find its range on horizontal ground ($g = 10$ m/s²).</div>
+            <div class="q-text"><span class="lang">DE:</span> Projektil mit 25 m/s unter 60°. Reichweite ($g = 10$ m/s²).</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> Range $= \frac{v^2 \sin(2\theta)}{g} = \frac{625 \cdot 0.866}{10} \approx 54.1$ m.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q33</span> <span class="badge hard">Hard</span> <span class="badge">Mixed</span> <span class="badge">12m</span>
+            <div class="q-text"><span class="lang">EN:</span> Given $A = \begin{pmatrix} 3 & 1 \\ 2 & 4 \end{pmatrix}$, find $A^{-1}$ and verify $A \cdot A^{-1} = I$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Für $A = \begin{pmatrix} 3 & 1 \\ 2 & 4 \end{pmatrix}$: $A^{-1}$ berechnen und prüfen.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $A^{-1} = \frac{1}{10}\begin{pmatrix} 4 & -1 \\ -2 & 3 \end{pmatrix}$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q34</span> <span class="badge hard">Hard</span> <span class="badge">Mixed</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> Compute the sum $\sum_{k=0}^{5} \binom{5}{k}$ using the binomial theorem.</div>
+            <div class="q-text"><span class="lang">DE:</span> Summe $\sum_{k=0}^{5} \binom{5}{k}$ mit dem Binomialsatz.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $= 2^5 = 32$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q35</span> <span class="badge hard">Schwer</span> <span class="badge de">DE</span> <span class="badge">Textanalyse</span> <span class="badge">10m</span>
+            <div class="q-text">Analysieren Sie den Satz: <em>„Obwohl die Technologie fortschreitet, bleibt der Mensch die zentrale Figur.“</em> Erklären Sie Konjunktion, Wortstellung und Bedeutung.</div>
+        </div>
+        <div class="sol-box"><strong>Lösung:</strong> „Obwohl“ leitet Nebensatz ein (Verb am Ende); Hauptsatz danach beginnt mit Verb an 2. Stelle. Bedeutung: Kontrast zwischen Fortschritt und menschlicher Rolle.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q36</span> <span class="badge hard">Hard</span> <span class="badge">Mixed</span> <span class="badge">12m</span>
+            <div class="q-text"><span class="lang">EN:</span> A 2 kg block is attached to a spring ($k = 200$ N/m) and oscillates with amplitude 0.1 m. Find the total energy and maximum speed.</div>
+            <div class="q-text"><span class="lang">DE:</span> 2 kg Block an Feder $k = 200$ N/m, Amplitude 0.1 m. Gesamtenergie und maximale Geschwindigkeit.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $E = \frac{1}{2}kA^2 = 1$ J; $v_{max} = \sqrt{k/m} \cdot A = 1$ m/s.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q37</span> <span class="badge hard">Hard</span> <span class="badge">Mixed</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> Use L'Hôpital to evaluate $\lim_{x\to 0} \frac{e^x - 1 - x}{x^2}$.</div>
+            <div class="q-text"><span class="lang">DE:</span> L'Hôpital: $\lim_{x\to 0} \frac{e^x - 1 - x}{x^2}$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\frac{1}{2}$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q38</span> <span class="badge hard">Hard</span> <span class="badge">Mixed</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> Show that $\cos(2x) = 1 - 2\sin^2(x)$ using double-angle identities.</div>
+            <div class="q-text"><span class="lang">DE:</span> Zeigen Sie $\cos(2x) = 1 - 2\sin^2(x)$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\cos(2x) = \cos^2 x - \sin^2 x = 1 - \sin^2 x - \sin^2 x = 1 - 2\sin^2 x$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q39</span> <span class="badge hard">Schwer</span> <span class="badge de">DE</span> <span class="badge">Aufsatz</span> <span class="badge">20m</span>
+            <div class="q-text">Schreiben Sie einen Aufsatz (ca. 250 Wörter) zum Thema: <em>„Welche Rolle spielt Mathematik in der modernen Welt?“</em> Einleitung, Argumente, Beispiele, Schluss.</div>
+        </div>
+        <div class="sol-box"><strong>Hinweis:</strong> Freies Schreiben.</div>
+        <div class="grid-area" style="height: 120mm;"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge exam">Q40</span> <span class="badge hard">Hard</span> <span class="badge">Final Reflection</span> <span class="badge">—</span>
+            <div class="q-text"><span class="lang">EN:</span> Write a short paragraph (5–6 sentences) in English: What did you learn from this 5-year preparation journey? What are your next steps?</div>
+            <div class="q-text"><span class="lang">DE:</span> Kurzer Absatz auf Deutsch: Was hast du aus dieser 5-jährigen Vorbereitung gelernt? Was sind deine nächsten Schritte?</div>
+        </div>
+        <div class="sol-box"><strong>Hinweis:</strong> This is for you. There is no right or wrong answer.</div>
+        <div class="grid-area" style="height: 50mm;"></div>
+    </div>
+</div>
+
+<!-- ANSWER KEY -->
+<div class="page">
+    <h1>Answer Key (Q1 – Q40)</h1>
+    <table style="font-size: 0.75em;">
+        <thead><tr><th>Q</th><th>Answer</th><th>Q</th><th>Answer</th><th>Q</th><th>Answer</th><th>Q</th><th>Answer</th></tr></thead>
+        <tbody>
+            <tr><td>Q1</td><td>$-\tan x + e^{3x}(3\sin x + \cos x)$</td><td>Q11</td><td>$\approx 0.67$ atm</td><td>Q21</td><td>$4.5$</td><td>Q31</td><td>$y = 2e^{\sin x}$</td></tr>
+            <tr><td>Q2</td><td>$\ln 2$</td><td>Q12</td><td>$\approx 41.8°$</td><td>Q22</td><td>$2/9 \approx 0.222$</td><td>Q32</td><td>$\approx 54.1$ m</td></tr>
+            <tr><td>Q3</td><td>$(-10, 7, 9)$; $\cos\theta = -8/(\sqrt{14}\sqrt{21})$</td><td>Q13</td><td>$\approx 2.49$ eV</td><td>Q23</td><td>$\approx 16.2\%$</td><td>Q33</td><td>$\frac{1}{10}\begin{pmatrix}4&-1\\-2&3\end{pmatrix}$</td></tr>
+            <tr><td>Q4</td><td>$h = 11.25$ m; $t = 3$ s</td><td>Q14</td><td>Balanced redox equation</td><td>Q24</td><td>$x=2, y=1$</td><td>Q34</td><td>$32$</td></tr>
+            <tr><td>Q5</td><td>$\approx 4.8$ m/s</td><td>Q15</td><td>$0.2$ M</td><td>Q25</td><td>A) hätte / würde</td><td>Q35</td><td>Nebensatz + Hauptsatz</td></tr>
+            <tr><td>Q6</td><td>$I=6$ A, $P_1=24$ W</td><td>Q16</td><td>ATP energy currency</td><td>Q26</td><td>Handel vs. Ungleichheit</td><td>Q36</td><td>$E=1$ J, $v_{max}=1$ m/s</td></tr>
+            <tr><td>Q7</td><td>$x=4$, $h=2$; $SA=48$ m²</td><td>Q17</td><td>100 short</td><td>Q27</td><td>Free writing</td><td>Q37</td><td>$1/2$</td></tr>
+            <tr><td>Q8</td><td>$F = 0.6$ N</td><td>Q18</td><td>$T=0.005$ s; $v=300$ m/s</td><td>Q28</td><td>$\approx 33$ students</td><td>Q38</td><td>Identity shown</td></tr>
+            <tr><td>Q9</td><td>$-4$</td><td>Q19</td><td>Exo vs endo</td><td>Q29</td><td>$r \approx 4.3$ cm, $h \approx 8.6$ cm</td><td>Q39</td><td>Free writing</td></tr>
+            <tr><td>Q10</td><td>$e^2 - 1$</td><td>Q20</td><td>$q=0.4$, $p=0.6$; 480</td><td>Q30</td><td>$\pi/2$</td><td>Q40</td><td>Reflection</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- FINAL WORDS & REFERENCES -->
+<div class="page">
+    <h1>Final Words</h1>
+    <p style="font-size: 1.02em; line-height: 1.6;">You have reached the end of the series. Over 160 questions, 4 parts, and countless hours of preparation — this is the moment where knowledge meets discipline.</p>
+    <p style="font-size: 1.02em; line-height: 1.6;">The ETH Zürich entrance exam is not just a test of intelligence. It is a test of <strong>consistency, calm under pressure, and the ability to think clearly when it matters most</strong>. You have built the foundation. Now trust it.</p>
+    <p style="font-size: 1.02em; line-height: 1.6;">Remember: every problem you solved, every mistake you logged, every late night spent on a difficult integral — all of it was preparation for this. Walk into the exam hall with confidence. You have earned it.</p>
+    <p style="font-size: 1.02em; line-height: 1.6; text-align: center; margin-top: 30px; font-style: italic; color: #00305e;">
+        "The best preparation for tomorrow is doing your best today."<br>— H. Jackson Brown Jr.
+    </p>
+    <p style="font-size: 1.05em; text-align: center; margin-top: 30px;">
+        <strong>Good luck. You've got this. 💙</strong>
+    </p>
+    <hr style="margin: 40px 0; border: none; border-top: 1px solid #ccc;">
+    <h2>References &amp; Copyright Notice</h2>
+    <ul style="font-size: 0.88em; color: #555;">
+        <li>This study material is <strong>not</strong> an official ETH Zürich document. It is an independent preparation guide.</li>
+        <li><strong>Questions:</strong> All questions across Parts 1–4 are <strong>original and adapted</strong> problems in the ETH/Matura style. Copyrighted ETH exam questions have not been reproduced verbatim.</li>
+        <li><strong>References:</strong> ETH Aufnahmeprüfung archive, GitHub <em>janikschuettler/eth-entrance-exam</em>, Halliday–Resnick, Tipler–Mosca, Papula, Stewart, Campbell <em>Biology</em>, Atkins <em>Chemistry</em>, Goethe-Institut materials.</li>
+        <li><strong>Typesetting:</strong> MathJax (Apache 2.0) CDN.</li>
+        <li><strong>License:</strong> This document may be distributed freely. Commercial sale is not permitted.(also made with ai tools)</li>
+        <li><strong>Author:</strong> FF_Weath — September 2026.</li>
+        <li><strong>Series:</strong> Part 1 · Part 2 · Part 3 · Part 4 (this book).</li>
+    </ul>
+    <p style="text-align: center; margin-top: 40px; font-size: 1.15em; color: #00305e; font-weight: bold;">
+        ~ END OF SERIES ~
+    </p>
+</div>
+
+</div>
+</body>
+</html>

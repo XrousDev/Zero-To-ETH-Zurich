@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ETH ZÜRICH 5-YEAR PREPARATION GUIDE AND QUESTION BANK – PART 1</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true }, options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] } };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+:root { --eth-blue: #00305e; --eth-light-blue: #0072c6; --bg-color: #f4f6f8; --text-color: #333; --border-color: #ddd; --grid-line: #b8d4e8; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: var(--text-color); line-height: 1.4; background-color: #555; padding: 20px; }
+.document { max-width: 210mm; margin: 0 auto; background: #fff; box-shadow: 0 0 15px rgba(0,0,0,0.2); counter-reset: page; }
+
+.page { padding: 10mm 15mm; position: relative; page-break-after: always; break-after: page; }
+.page:last-child { page-break-after: auto; break-after: auto; }
+.page::after { content: counter(page); counter-increment: page; position: absolute; bottom: 5mm; right: 10mm; font-size: 10px; color: #888; }
+
+.cover { min-height: 250mm; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.cover::after { content: none; }
+.cover h1 { font-size: 2.1em; color: var(--eth-blue); margin-bottom: 10px; border-bottom: 3px solid var(--eth-light-blue); padding-bottom: 10px; }
+.cover h2 { font-size: 1.25em; color: var(--eth-light-blue); margin-bottom: 40px; font-weight: normal; }
+.cover .meta { font-size: 1em; }
+
+h1, h2, h3, h4 { color: var(--eth-blue); }
+h1 { border-bottom: 2px solid var(--eth-blue); padding-bottom: 4px; font-size: 1.45em; margin-bottom: 10px; }
+h2 { font-size: 1.15em; margin-top: 12px; margin-bottom: 6px; }
+h3 { font-size: 1em; color: var(--eth-light-blue); margin-top: 10px; margin-bottom: 5px; }
+
+table { width: 100%; border-collapse: collapse; margin-bottom: 10px; font-size: 0.85em; }
+th, td { border: 1px solid var(--border-color); padding: 4px 6px; text-align: left; vertical-align: top; }
+th { background-color: var(--eth-blue); color: #fff; }
+
+.print-btn { position: fixed; top: 20px; right: 20px; background: #d9381e; color: #fff; border: none; padding: 10px 16px; font-size: 14px; font-weight: bold; cursor: pointer; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); z-index: 1000; }
+.print-btn:hover { background: #b02a15; }
+
+.q-box { background: var(--bg-color); border-left: 4px solid var(--eth-light-blue); padding: 8px 10px; margin-bottom: 6px; border-radius: 0 5px 5px 0; }
+.sol-box { border: 1px dashed var(--border-color); padding: 7px 10px; margin-bottom: 6px; background: #fafafa; font-size: 0.85em; }
+.grid-area {
+    height: 26mm; margin-bottom: 10px; border: 1px solid var(--grid-line);
+    background-color: #ffffff;
+    background-image: linear-gradient(to right, var(--grid-line) 1px, transparent 1px), linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 5mm 5mm; background-position: 0 0; position: relative;
+}
+.grid-area::before { content: "✍️ Working space"; position: absolute; top: 1mm; left: 2mm; font-size: 8px; color: #7a9bbf; }
+
+/* KRİTİK: Her soru grubunu kıramaz hale getir */
+.question-block { break-inside: avoid; page-break-inside: avoid; display: block; margin-bottom: 8px; }
+
+.badge { display: inline-block; padding: 2px 6px; border-radius: 10px; font-size: 0.7em; font-weight: bold; margin-right: 4px; margin-bottom: 4px; }
+.badge.hard { background: #ffcccc; color: #990000; }
+.badge.med { background: #fff0cc; color: #996600; }
+.badge.easy { background: #cce6ff; color: #004080; }
+.badge.topic { background: var(--eth-blue); color: #fff; }
+.badge.de { background: #e2d4f0; color: #4a1e80; }
+.badge.exam { background: #d9381e; color: #fff; }
+
+.q-text { margin-bottom: 4px; font-size: 0.9em; }
+.tip { background: #e6f0fa; border-left: 3px solid var(--eth-blue); padding: 5px 9px; margin-top: 6px; font-size: 0.82em; }
+
+.series-warning { background: #fff8e1; border-left: 5px solid #f0a500; padding: 14px; margin: 10px 0; border-radius: 0 8px 8px 0; }
+.series-warning h2 { color: #b37400; margin-top: 0; }
+
+.editable-hint { font-size: 0.82em; color: #777; font-style: italic; margin-bottom: 6px; }
+[contenteditable="true"] { background: #fdfdfd; border-bottom: 1px dotted #bbb; min-height: 16px; padding: 2px; }
+[contenteditable="true"]:focus { background: #f0f8ff; outline: none; }
+
+.exam-header { background: #d9381e; color: #fff; padding: 8px 13px; border-radius: 5px; margin-bottom: 10px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
+.exam-header .time { font-size: 0.95em; }
+
+ul, ol { padding-left: 18px; margin-bottom: 6px; }
+p { margin-bottom: 6px; }
+
+@page { size: A4; margin: 10mm; }
+@media print {
+    body { background: #fff; padding: 0; }
+    .document { box-shadow: none; max-width: 100%; margin: 0; }
+    .print-btn { display: none; }
+    .page { padding: 0; page-break-after: always; break-after: page; }
+    .page:last-child { page-break-after: auto; break-after: auto; }
+    .q-box, .sol-box, .grid-area, .question-block, .series-warning, .exam-header { break-inside: avoid; page-break-inside: avoid; }
+    .grid-area { background-color: #ffffff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    [contenteditable="true"] { background: transparent; border-bottom: 1px dotted #bbb; }
+    h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
+}
+</style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+
+<div class="document">
+
+<!-- COVER -->
+<div class="page cover">
+    <h1>ETH ZÜRICH 5-YEAR PREPARATION GUIDE AND QUESTION BANK</h1>
+    <h2>Comprehensive Study Plan, Tactics, and a 160-Question Bank (Part 1)</h2>
+    <div class="meta">
+        <p><strong>Author:</strong> FF_Weath</p>
+        <p><strong>Date:</strong> September 2026</p>
+        <p><em>Special Edition: For Engineering and Computer Science Applicants</em></p>
+    </div>
+</div>
+
+<!-- SERIES WARNING -->
+<div class="page">
+    <div class="series-warning">
+        <h2>⚠️ This Document is Part of a Series</h2>
+        <p>This file is the <strong>1st part</strong> of the <strong>ETH Zürich 5-Year Preparation Guide and Question Bank</strong> series. The complete series:</p>
+        <ul>
+            <li><strong>Part 1:</strong> General tactics, study plan, 5-year roadmap, mathematics and foundational physics.</li>
+            <li><strong>Part 2:</strong> Physics (electricity, magnetism, thermodynamics, waves), biology, chemistry, German language.</li>
+            <li><strong>Part 3:</strong> Advanced mathematics, advanced physics, academic German reading and writing.</li>
+            <li><strong>Part 4:</strong> Mixed mock exams and exam strategies.</li>
+        </ul>
+        <p><strong>Important:</strong> It is strongly recommended to download and study the entire series, not just this part.</p>
+        <p><strong>Recommendation:</strong> Read the general tactics and study plan in this part first. Then use the other parts to focus on the relevant subjects.</p>
+    </div>
+</div>
+
+<!-- TOC -->
+<div class="page">
+    <h1>Table of Contents</h1>
+    <ul>
+        <li><strong>Section 1:</strong> Problem-Solving Tactics</li>
+        <li><strong>Section 2:</strong> Study Strategies</li>
+        <li><strong>Section 3:</strong> Oral Exam Strategies</li>
+        <li><strong>Section 4:</strong> Topics and Priority Matrix</li>
+        <li><strong>Section 5:</strong> Personal Study Plan (Editable)</li>
+        <li><strong>Section 6:</strong> Resources</li>
+        <li><strong>Section 7:</strong> Question Bank (Q1–Q40)
+            <ul>
+                <li>Q1–Q8: Algebra, Polynomials, Functions</li>
+                <li>Q9–Q18: Calculus</li>
+                <li>Q19–Q26: Vectors, 3D Geometry, Linear Algebra</li>
+                <li>Q27–Q32: Probability and Statistics</li>
+                <li>Q33–Q40: Mechanics</li>
+            </ul>
+        </li>
+        <li><strong>Answer Key:</strong> Q1–Q40</li>
+        <li><strong>Last Page:</strong> References and Copyright Notice</li>
+    </ul>
+</div>
+
+<!-- SECTION 1 -->
+<div class="page">
+    <h1>Section 1: Problem-Solving Tactics</h1>
+    <p>The ETH Zürich (and Swiss Matura) exams test not formula memorization, but the ability to model systems and think like an engineer.</p>
+    <h3>1. Divide and Conquer</h3>
+    <p>Break a complex problem into independent subsystems.<br><em>Physics example:</em> For a cylinder rolling down an inclined plane, write translational kinematics (Newton) and rotational dynamics (torque) as completely separate equations, then link them with $v = \omega r$.</p>
+    <h3>2. Reverse Engineering</h3>
+    <p>Work backward from the desired final result.<br><em>Math example:</em> If asked for the area between two curves, reason: "I need a definite integral → I need limits → I need intersection points from $f(x)=g(x)$."</p>
+    <h3>3. Debug Your Own Work</h3>
+    <p>Apply the "edge-case testing" mindset from software.<br><em>Math example:</em> When you derive a general formula, plug in $x=0$, $x=1$, or $x \to \infty$ to test whether the result makes sense.</p>
+    <h3>4. Visualization</h3>
+    <p>Geometry and mechanics problems cannot be solved without drawings. Free-body diagrams (FBD) and function graphs dramatically reduce error rates.</p>
+    <h3>5. Dimensional Analysis</h3>
+    <p>Check the consistency of units in your final formula. <em>Physics example:</em> If you derived an energy equation, the unit must be $kg \cdot m^2/s^2$ (Joule).</p>
+</div>
+
+<!-- SECTION 2 -->
+<div class="page">
+    <h1>Section 2: Study Strategies</h1>
+    <h3>1. Deep Work</h3>
+    <p>Uninterrupted focus is essential. Use the "Pomodoro" technique (50 min focus, 10 min break) and completely switch off your phone.</p>
+    <h3>2. Active Recall &amp; Spaced Repetition</h3>
+    <p>Reading formulas is passive. Use <strong>Anki</strong> or <strong>Notion</strong> to periodically test yourself.</p>
+    <h3>3. Feynman Technique</h3>
+    <p>The best way to understand a topic is to explain it to someone who knows nothing about it.</p>
+    <h3>4. Past Paper Analysis</h3>
+    <p>You must solve ETH's previous "Aufnahmeprüfung" exams. Every wrong answer should be recorded in a dedicated "Error Log".</p>
+    <h3>5. Avoiding Burnout</h3>
+    <p>Mental health is critical in a 5-year process. Take one full day off (Sunday) each week.</p>
+</div>
+
+<!-- SECTION 3 -->
+<div class="page">
+    <h1>Section 3: Oral Exam Strategies</h1>
+    <p>In the Swiss system, the "Mündliche Prüfung" (oral exam) is decisive. You must narrate your thought process.</p>
+    <h3>1. Narrating the Thought Process</h3>
+    <p>Even if you take a wrong turn, if the examiner hears your reasoning, you get points.</p>
+    <ul>
+        <li><strong>EN:</strong> "First, I will resolve the forces into their components, and then..."</li>
+        <li><strong>DE:</strong> "Zuerst werde ich die Kräfte in ihre Komponenten zerlegen, und dann..."</li>
+    </ul>
+    <h3>2. Buying Time</h3>
+    <ul>
+        <li><strong>EN:</strong> "Let me quickly sketch this out to visualize the problem better."</li>
+        <li><strong>DE:</strong> "Lassen Sie mich das kurz skizzieren..."</li>
+    </ul>
+    <h3>3. Self-Correction</h3>
+    <ul>
+        <li><strong>EN:</strong> "Wait, my dimensional analysis fails here. I must have dropped a factor of x."</li>
+        <li><strong>DE:</strong> "Moment, meine Einheitenprüfung schlägt fehl..."</li>
+    </ul>
+</div>
+
+<!-- SECTION 4 -->
+<div class="page">
+    <h1>Section 4: Topics and Priority Matrix</h1>
+    <table>
+        <thead><tr><th>Subject / Topic</th><th>English / German</th><th>Priority</th><th>Notes</th></tr></thead>
+        <tbody>
+            <tr><td>Math: Derivatives &amp; Integrals</td><td>Calculus / Differential- und Integralrechnung</td><td><strong>HIGH</strong></td><td>Optimization, volumes, Taylor series. Proofs may be required.</td></tr>
+            <tr><td>Math: Vectors &amp; 3D Geometry</td><td>Vectors, 3D Geometry / Vektorgeometrie</td><td><strong>HIGH</strong></td><td>Line-plane intersections, projection, cross product.</td></tr>
+            <tr><td>Math: Complex Numbers</td><td>Complex Numbers / Komplexe Zahlen</td><td>Medium</td><td>Euler form, polar coordinates, De Moivre.</td></tr>
+            <tr><td>Math: Probability</td><td>Probability / Wahrscheinlichkeit</td><td>Medium</td><td>Binomial, Bayes, conditional probability.</td></tr>
+            <tr><td>Physics: Mechanics</td><td>Mechanics / Mechanik</td><td><strong>HIGH</strong></td><td>Energy conservation, angular momentum, friction.</td></tr>
+            <tr><td>Physics: Electromagnetism</td><td>Electromagnetism / Elektromagnetismus</td><td><strong>HIGH</strong></td><td>Kirchhoff, Lorentz force, induction.</td></tr>
+            <tr><td>Physics: Thermodynamics &amp; Waves</td><td>Thermodynamics, Waves</td><td>Medium</td><td>Ideal gas, heat engines, Snell's law.</td></tr>
+            <tr><td>Languages: Academic Reading/Writing</td><td>Academic Reading &amp; Essay</td><td><strong>HIGH</strong></td><td>Article analysis, argumentative essay (Erörterung).</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- SECTION 5: PERSONAL PLAN -->
+<div class="page">
+    <h1>Section 5: Your Personal Study Plan</h1>
+    <p class="editable-hint">This section is yours. Click any cell and type. Editable in the browser. When you print → save as PDF, your entries are preserved.</p>
+
+    <h3>My Weekly Schedule</h3>
+    <table>
+        <thead><tr><th>Day</th><th>Subject Focus</th><th>Daily Task</th><th>Time</th></tr></thead>
+        <tbody>
+            <tr><td contenteditable="true">Monday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">30 min</td></tr>
+            <tr><td contenteditable="true">Tuesday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">30 min</td></tr>
+            <tr><td contenteditable="true">Wednesday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">30 min</td></tr>
+            <tr><td contenteditable="true">Thursday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">30 min</td></tr>
+            <tr><td contenteditable="true">Friday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">30 min</td></tr>
+            <tr><td contenteditable="true">Saturday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">30 min</td></tr>
+            <tr><td contenteditable="true">Sunday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">Rest</td></tr>
+        </tbody>
+    </table>
+
+    <h3>My Monthly Goals</h3>
+    <table>
+        <thead><tr><th>Month</th><th>Goal</th><th>Notes</th></tr></thead>
+        <tbody>
+            <tr><td contenteditable="true">September</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+            <tr><td contenteditable="true">October</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+            <tr><td contenteditable="true">November</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+            <tr><td contenteditable="true">December</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+            <tr><td contenteditable="true">January</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+            <tr><td contenteditable="true">February</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+        </tbody>
+    </table>
+
+    <h3>Error Log</h3>
+    <p><em>Write down every question you got wrong, then re-solve it two weeks later.</em></p>
+    <table>
+        <thead><tr><th>Date</th><th>Question / Topic</th><th>Error Cause</th><th>Review</th></tr></thead>
+        <tbody>
+            <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">☐</td></tr>
+            <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">☐</td></tr>
+            <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">☐</td></tr>
+            <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">☐</td></tr>
+            <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">☐</td></tr>
+        </tbody>
+    </table>
+
+    <h3>My Notes</h3>
+    <div class="grid-area" style="height: 50mm;"></div>
+</div>
+
+<!-- SECTION 6: RESOURCES -->
+<div class="page">
+    <h1>Section 6: Resources</h1>
+    <h3>Books</h3>
+    <ul>
+        <li><strong>Math (DE):</strong> <em>Mathematik für Ingenieure und Naturwissenschaftler</em> – Lothar Papula (Vol. 1 &amp; 2).</li>
+        <li><strong>Physics (EN):</strong> <em>Fundamentals of Physics</em> – Halliday, Resnick, Walker.</li>
+        <li><strong>Physics (DE):</strong> <em>Tipler/Mosca: Physik für Wissenschaftler und Ingenieure</em>.</li>
+    </ul>
+    <h3>Websites &amp; Archives</h3>
+    <ul>
+        <li>ETH Zürich Aufnahmeprüfung archive: ethz.ch</li>
+        <li>Mathe-Physik-Aufgaben: mathe-physik-aufgaben.de</li>
+        <li>Paul's Online Math Notes: tutorial.math.lamar.edu</li>
+        <li>GitHub: github.com/janikschuettler/eth-entrance-exam</li>
+    </ul>
+    <h3>Tools</h3>
+    <ul>
+        <li><strong>Geogebra 3D:</strong> Vector and 3D geometry visualization.</li>
+        <li><strong>Anki:</strong> Spaced repetition flashcards.</li>
+        <li><strong>Desmos:</strong> Function graphs and derivative/integral visualization.</li>
+    </ul>
+</div>
+
+<!-- SECTION 7: QUESTION BANK -->
+<div class="page">
+    <h1>Section 7: Question Bank (Part 1 – 40 Questions)</h1>
+    <p><em>Note: All questions are <strong>original and adapted</strong> problems in the ETH/Matura style.</em></p>
+    <h2>A. Algebra, Polynomials, and Functions</h2>
+
+    <!-- Q1 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q1</span> <span class="badge hard">Hard</span> <span class="badge">Algebra</span> <span class="badge">12m</span>
+            <div class="q-text"><span class="lang">EN:</span> Show that $P(x) = x^4 - 6x^3 + 13x^2 - 12x + 4$ is a perfect square and write it in the form $Q(x)^2$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Zeigen Sie, dass $P(x)$ ein vollständiges Quadrat ist, und schreiben Sie es in der Form $Q(x)^2$.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> Assume $P(x) = (x^2+ax+b)^2$ and match coefficients.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $P(x) = (x^2-3x+2)^2 = (x-1)^2(x-2)^2$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q2</span> <span class="badge easy">Easy</span> <span class="badge">Algebra</span> <span class="badge">5m</span>
+            <div class="q-text"><span class="lang">EN:</span> Simplify $\frac{2x}{x^2-1} - \frac{1}{x-1}$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Vereinfachen Sie $\frac{2x}{x^2-1} - \frac{1}{x-1}$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\frac{1}{x+1}$ ($x \neq 1$).</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q3</span> <span class="badge hard">Hard</span> <span class="badge">Inequality</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> Solve the inequality $0 < \frac{x+2}{x-1} \le 1$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Lösen Sie die Ungleichung $0 < \frac{x+2}{x-1} \le 1$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $(-\infty, -2)$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q4</span> <span class="badge med">Medium</span> <span class="badge">Inverse Function</span> <span class="badge">7m</span>
+            <div class="q-text"><span class="lang">EN:</span> Find the inverse of $f(x) = \sinh(x) = \frac{e^x - e^{-x}}{2}$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Bestimmen Sie die Umkehrfunktion von $f(x) = \sinh(x)$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $f^{-1}(x) = \ln(x + \sqrt{x^2+1})$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q5</span> <span class="badge hard">Hard</span> <span class="badge">Logarithms</span> <span class="badge">8m</span>
+            <div class="q-text"><span class="lang">EN:</span> Solve $\log_{10}(x) + \log_{10}(x-0.9) = -1$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Lösen Sie $\log_{10}(x) + \log_{10}(x-0.9) = -1$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $x = 1$ (domain $x > 0.9$).</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q6</span> <span class="badge easy">Easy</span> <span class="badge">Inverse Function</span> <span class="badge">4m</span>
+            <div class="q-text"><span class="lang">EN:</span> If $f(x) = \frac{2x+3}{x-4}$, find $f^{-1}(5)$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Wenn $f(x) = \frac{2x+3}{x-4}$, berechnen Sie $f^{-1}(5)$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $f^{-1}(5) = \frac{23}{3}$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q7</span> <span class="badge med">Medium</span> <span class="badge">Limits</span> <span class="badge">6m</span>
+            <div class="q-text"><span class="lang">EN:</span> Evaluate $\lim_{x\to 0} \frac{x - \sin(x)}{x^3}$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Berechnen Sie $\lim_{x\to 0} \frac{x - \sin(x)}{x^3}$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\frac{1}{6}$ (L'Hôpital or Taylor).</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q8</span> <span class="badge hard">Hard</span> <span class="badge">Optimization</span> <span class="badge">12m</span>
+            <div class="q-text"><span class="lang">EN:</span> Find the dimensions of the rectangle with maximum area inscribed under the parabola $y = 4 - x^2$ above the x-axis.</div>
+            <div class="q-text"><span class="lang">DE:</span> Bestimmen Sie die Abmessungen des Rechtecks mit maximalem Flächeninhalt unter der Parabel $y = 4 - x^2$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\frac{4}{\sqrt{3}} \times \frac{8}{3}$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <h2>B. Calculus: Limits, Derivatives, Integrals, Series</h2>
+
+    <!-- Q9 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q9</span> <span class="badge med">Medium</span> <span class="badge">Parametric</span> <span class="badge">6m</span>
+            <div class="q-text"><span class="lang">EN:</span> For $x = t^3-3t$, $y = t^2-2t$, find $\frac{dy}{dx}$ at $t=2$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Für $x = t^3-3t$, $y = t^2-2t$: Berechnen Sie $\frac{dy}{dx}$ bei $t=2$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\frac{2}{9}$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q10</span> <span class="badge med">Medium</span> <span class="badge">Related Rates</span> <span class="badge">7m</span>
+            <div class="q-text"><span class="lang">EN:</span> A 10 m ladder slides with its base moving at 0.5 m/s. How fast is the top sliding down when the base is 6 m from the wall?</div>
+            <div class="q-text"><span class="lang">DE:</span> Eine 10 m Leiter: Die Basis gleitet mit 0.5 m/s. Wie schnell gleitet die Spitze, wenn die Basis 6 m entfernt ist?</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $0.375$ m/s downward.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q11 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q11</span> <span class="badge hard">Hard</span> <span class="badge">Volume</span> <span class="badge">9m</span>
+            <div class="q-text"><span class="lang">EN:</span> Find the volume generated by rotating $y=\sqrt{4-x^2}$ on $[-2,2]$ about the x-axis.</div>
+            <div class="q-text"><span class="lang">DE:</span> Bestimmen Sie das Volumen des Rotationskörpers von $y=\sqrt{4-x^2}$ auf $[-2,2]$ um die x-Achse.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\frac{32\pi}{3}$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q12 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q12</span> <span class="badge med">Medium</span> <span class="badge">Improper Integral</span> <span class="badge">7m</span>
+            <div class="q-text"><span class="lang">EN:</span> Evaluate $\int_0^\infty x e^{-x} dx$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Berechnen Sie $\int_0^\infty x e^{-x} dx$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $1$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q13 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q13</span> <span class="badge hard">Hard</span> <span class="badge">Maclaurin</span> <span class="badge">9m</span>
+            <div class="q-text"><span class="lang">EN:</span> Write the first 3 non-zero terms of the Maclaurin series for $\cos(x)$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Schreiben Sie die ersten 3 nicht-null Terme der Maclaurin-Reihe für $\cos(x)$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $1 - \frac{x^2}{2} + \frac{x^4}{24}$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q14 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q14</span> <span class="badge med">Medium</span> <span class="badge">ODE</span> <span class="badge">7m</span>
+            <div class="q-text"><span class="lang">EN:</span> Solve the differential equation $\frac{dy}{dx} = 2xy$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Lösen Sie die Differentialgleichung $\frac{dy}{dx} = 2xy$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $y = K e^{x^2}$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q15 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q15</span> <span class="badge med">Medium</span> <span class="badge">Differentiability</span> <span class="badge">6m</span>
+            <div class="q-text"><span class="lang">EN:</span> Find $a$ and $b$ so that $f(x)=\begin{cases}ax^2+2 & x<2\\ x^3-bx & x\ge 2\end{cases}$ is differentiable at $x=2$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Bestimmen Sie $a, b$, so dass $f$ an $x=2$ differenzierbar ist.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $a=4.5$, $b=-6$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q16 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q16</span> <span class="badge hard">Hard</span> <span class="badge">Bayes</span> <span class="badge">8m</span>
+            <div class="q-text"><span class="lang">EN:</span> A disease affects 1% of a population. A test has 99% sensitivity and 5% false-positive rate. If a person tests positive, what is the probability they actually have the disease?</div>
+            <div class="q-text"><span class="lang">DE:</span> Eine Krankheit betrifft 1%. Der Test hat 99% Sensitivität und 5% Falsch-Positiv-Rate. Wie groß ist die Wahrscheinlichkeit bei positivem Test?</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\approx 0.1667$ (16.67%).</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q17 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q17</span> <span class="badge hard">Hard</span> <span class="badge">Wedge Dynamics</span> <span class="badge">12m</span>
+            <div class="q-text"><span class="lang">EN:</span> A frictionless wedge of mass $M$ and angle $\theta$ rests on a horizontal floor. A block of mass $m$ is released on it. Find the horizontal acceleration $a_M$ of the wedge if it is free to slide.</div>
+            <div class="q-text"><span class="lang">DE:</span> Ein reibungsfreier Keil $M$, Winkel $\theta$, Block $m$. Bestimmen Sie die horizontale Beschleunigung $a_M$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $a_M = \frac{mg\sin\theta\cos\theta}{M + m\sin^2\theta}$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q18 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q18</span> <span class="badge med">Medium</span> <span class="badge">Series</span> <span class="badge">6m</span>
+            <div class="q-text"><span class="lang">EN:</span> Find the sum of $\sum_{n=1}^\infty \frac{n}{2^n}$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Bestimmen Sie die Summe von $\sum_{n=1}^\infty \frac{n}{2^n}$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $2$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <h2>C. Vectors, 3D Geometry, Linear Algebra</h2>
+
+    <!-- Q19 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q19</span> <span class="badge easy">Easy</span> <span class="badge">Cross Product</span> <span class="badge">4m</span>
+            <div class="q-text"><span class="lang">EN:</span> Find $\vec{u}\times\vec{v}$ for $\vec{u}=(1,2,-1)$, $\vec{v}=(3,0,2)$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Kreuzprodukt für $\vec{u}=(1,2,-1)$, $\vec{v}=(3,0,2)$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $(4,-5,-6)$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q20 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q20</span> <span class="badge med">Medium</span> <span class="badge">Determinant</span> <span class="badge">6m</span>
+            <div class="q-text"><span class="lang">EN:</span> Compute $\det\begin{pmatrix}1&2&-1\\0&3&2\\1&-1&0\end{pmatrix}$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Berechnen Sie die Determinante.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $9$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q21 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q21</span> <span class="badge hard">Hard</span> <span class="badge">Eigenvalues</span> <span class="badge">8m</span>
+            <div class="q-text"><span class="lang">EN:</span> Find the eigenvalues of $\begin{pmatrix}2&1\\1&2\end{pmatrix}$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Bestimmen Sie die Eigenwerte.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\lambda \in \{1, 3\}$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q22 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q22</span> <span class="badge med">Medium</span> <span class="badge">Line-Plane</span> <span class="badge">7m</span>
+            <div class="q-text"><span class="lang">EN:</span> Find the intersection of the plane $x+y+z=6$ with the line $\frac{x-1}{2}=\frac{y}{1}=\frac{z+1}{-1}$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Schnittpunkt von Ebene und Gerade.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $(7,3,-4)$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q23 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q23</span> <span class="badge easy">Easy</span> <span class="badge">Subspace</span> <span class="badge">4m</span>
+            <div class="q-text"><span class="lang">EN:</span> Which of the following is NOT a subspace of $\mathbb{R}^3$?</div>
+            <div class="q-text"><span class="lang">DE:</span> Welches ist kein Unterraum von $\mathbb{R}^3$?</div>
+            <div class="q-text">A) $x+y+z=0$ &nbsp; B) $2x-3y=0$ &nbsp; C) $x+y+z=1$ &nbsp; D) $x=0,y=0$</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> C) $x+y+z=1$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q24 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q24</span> <span class="badge med">Medium</span> <span class="badge">Rotation</span> <span class="badge">6m</span>
+            <div class="q-text"><span class="lang">EN:</span> Write the matrix of the linear transformation in $\mathbb{R}^2$ that rotates vectors counterclockwise by 90°.</div>
+            <div class="q-text"><span class="lang">DE:</span> Matrix der 90°-Drehung gegen den Uhrzeigersinn in $\mathbb{R}^2$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\begin{pmatrix}0&-1\\1&0\end{pmatrix}$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q25 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q25</span> <span class="badge hard">Hard</span> <span class="badge">Skew Lines</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> Find the shortest distance between the skew lines $L_1:(1,0,1)+t(1,2,1)$ and $L_2:(2,1,0)+s(0,1,1)$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Kürzester Abstand zwischen windschiefen Geraden.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\frac{\sqrt{3}}{3}$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q26 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q26</span> <span class="badge med">Medium</span> <span class="badge">Rank</span> <span class="badge">7m</span>
+            <div class="q-text"><span class="lang">EN:</span> Find the rank of $\begin{pmatrix}1&2&3\\2&4&6\\1&1&1\end{pmatrix}$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Bestimmen Sie den Rang der Matrix.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $2$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <h2>D. Probability and Statistics</h2>
+
+    <!-- Q27 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q27</span> <span class="badge easy">Easy</span> <span class="badge">Permutation</span> <span class="badge">4m</span>
+            <div class="q-text"><span class="lang">EN:</span> How many distinct 10-letter words can be formed from the letters of "MATEMATİK"?</div>
+            <div class="q-text"><span class="lang">DE:</span> Wie viele verschiedene 10-Buchstaben-Wörter aus "MATEMATİK"?</div>
+            <div class="q-text">A) $10!$ &nbsp; B) $\frac{10!}{2!2!2!}$ &nbsp; C) $\frac{10!}{3!2!}$ &nbsp; D) $\frac{10!}{3!}$</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> B) $\frac{10!}{2!2!2!}$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q28 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q28</span> <span class="badge med">Medium</span> <span class="badge">Conditional</span> <span class="badge">5m</span>
+            <div class="q-text"><span class="lang">EN:</span> If $P(A)=0.4$, $P(B)=0.5$, $P(A\cup B)=0.7$, find $P(A|B)$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Wenn $P(A)=0.4$, $P(B)=0.5$, $P(A\cup B)=0.7$, berechnen Sie $P(A|B)$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $0.4$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q29 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q29</span> <span class="badge hard">Hard</span> <span class="badge">PDF</span> <span class="badge">8m</span>
+            <div class="q-text"><span class="lang">EN:</span> Given the PDF $f(x)=cx^2$ for $0\le x\le 3$, find $c$ and $E[X]$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Für $f(x)=cx^2$, $0\le x\le 3$: Bestimmen Sie $c$ und $E[X]$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $c=\frac{1}{9}$, $E[X]=2.25$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q30 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q30</span> <span class="badge med">Medium</span> <span class="badge">Binomial</span> <span class="badge">6m</span>
+            <div class="q-text"><span class="lang">EN:</span> A fair coin is tossed 5 times. What is the probability of getting exactly 3 heads?</div>
+            <div class="q-text"><span class="lang">DE:</span> Eine faire Münze wird 5 Mal geworfen. Wahrscheinlichkeit für genau 3 Mal Kopf?</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\frac{5}{16} = 0.3125$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q31 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q31</span> <span class="badge easy">Easy</span> <span class="badge">CLT</span> <span class="badge">4m</span>
+            <div class="q-text"><span class="lang">EN:</span> According to the Central Limit Theorem, the distribution of the sample mean approaches which distribution for large $n$?</div>
+            <div class="q-text"><span class="lang">DE:</span> Welcher Verteilung nähert sich der Stichprobenmittelwert für großes $n$?</div>
+            <div class="q-text">A) Binomial &nbsp; B) Poisson &nbsp; C) Normal &nbsp; D) Exponential</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> C) Normal.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q32 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q32</span> <span class="badge med">Medium</span> <span class="badge">Normal</span> <span class="badge">6m</span>
+            <div class="q-text"><span class="lang">EN:</span> Given $\mu=50$, $\sigma=5$, find $P(X>60)$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Mit $\mu=50$, $\sigma=5$: Berechnen Sie $P(X>60)$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $0.0228$ (2.28%).</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <h2>E. Mechanics</h2>
+
+    <!-- Q33 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q33</span> <span class="badge med">Medium</span> <span class="badge">Projectile</span> <span class="badge">7m</span>
+            <div class="q-text"><span class="lang">EN:</span> A projectile is launched at 20 m/s at 30°. Find the time of flight ($g=10$).</div>
+            <div class="q-text"><span class="lang">DE:</span> Ein Projektil mit 20 m/s unter 30°. Bestimmen Sie die Flugzeit ($g=10$).</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $2$ s.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q34 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q34</span> <span class="badge med">Medium</span> <span class="badge">Energy</span> <span class="badge">6m</span>
+            <div class="q-text"><span class="lang">EN:</span> A 2 kg object is dropped from 10 m. Find its impact velocity.</div>
+            <div class="q-text"><span class="lang">DE:</span> Ein 2 kg Objekt fällt aus 10 m. Bestimmen Sie die Aufprallgeschwindigkeit.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $10\sqrt{2}$ m/s $\approx 14.14$ m/s.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q35 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q35</span> <span class="badge hard">Hard</span> <span class="badge">Rotation</span> <span class="badge">9m</span>
+            <div class="q-text"><span class="lang">EN:</span> A solid cylinder pulley $M=4$ kg, $R=0.5$ m has a 2 kg mass hanging from its string. Find the downward acceleration.</div>
+            <div class="q-text"><span class="lang">DE:</span> Vollzylinder-Rolle $M=4$ kg, $R=0.5$ m, hängende Masse 2 kg. Bestimmen Sie die Beschleunigung.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $5$ m/s².</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q36 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q36</span> <span class="badge med">Medium</span> <span class="badge">SHM</span> <span class="badge">7m</span>
+            <div class="q-text"><span class="lang">EN:</span> A 1 kg mass is attached to a spring with $k=100$ N/m. Find the period $T$.</div>
+            <div class="q-text"><span class="lang">DE:</span> 1 kg an einer Feder $k=100$ N/m. Bestimmen Sie die Periode $T$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\frac{\pi}{5}$ s $\approx 0.628$ s.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q37 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q37</span> <span class="badge easy">Easy</span> <span class="badge">Collision</span> <span class="badge">4m</span>
+            <div class="q-text"><span class="lang">EN:</span> In a perfectly inelastic collision, what happens to the colliding objects?</div>
+            <div class="q-text"><span class="lang">DE:</span> Was passiert bei einem vollkommen unelastischen Stoß?</div>
+            <div class="q-text">A) They separate &nbsp; B) They stick together &nbsp; C) Energy is conserved &nbsp; D) Speed doubles</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> B) They stick together.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q38 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q38</span> <span class="badge med">Medium</span> <span class="badge">Torricelli</span> <span class="badge">7m</span>
+            <div class="q-text"><span class="lang">EN:</span> Water flows from a hole 5 m below the surface. Find the exit velocity.</div>
+            <div class="q-text"><span class="lang">DE:</span> Wasser fließt aus einem Loch 5 m unter der Oberfläche. Ausflussgeschwindigkeit?</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $10$ m/s.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q39 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q39</span> <span class="badge hard">Hard</span> <span class="badge">Adiabatic</span> <span class="badge">8m</span>
+            <div class="q-text"><span class="lang">EN:</span> A monatomic ideal gas doubles its volume adiabatically. Find the pressure ratio ($\gamma=5/3$).</div>
+            <div class="q-text"><span class="lang">DE:</span> Ein einatomiges ideales Gas verdoppelt sein Volumen adiabatisch. Druckverhältnis ($\gamma=5/3$)?</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $2^{-5/3} \approx 0.315$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <!-- Q40 -->
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q40</span> <span class="badge med">Medium</span> <span class="badge">Orbit</span> <span class="badge">7m</span>
+            <div class="q-text"><span class="lang">EN:</span> Derive the orbital velocity of a satellite at radius $R$ in terms of $GM$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Leiten Sie die Bahngeschwindigkeit eines Satelliten bei Radius $R$ in $GM$ her.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $v = \sqrt{GM/R}$.</div>
+        <div class="grid-area"></div>
+    </div>
+</div>
+
+<!-- ANSWER KEY -->
+<div class="page">
+    <h1>Answer Key (Q1 – Q40)</h1>
+    <table style="font-size: 0.8em;">
+        <thead><tr><th>Q</th><th>Answer</th><th>Q</th><th>Answer</th><th>Q</th><th>Answer</th><th>Q</th><th>Answer</th></tr></thead>
+        <tbody>
+            <tr><td>Q1</td><td>$(x^2-3x+2)^2$</td><td>Q11</td><td>$\frac{32\pi}{3}$</td><td>Q21</td><td>$1, 3$</td><td>Q31</td><td>C) Normal</td></tr>
+            <tr><td>Q2</td><td>$\frac{1}{x+1}$</td><td>Q12</td><td>$1$</td><td>Q22</td><td>$(7,3,-4)$</td><td>Q32</td><td>$0.0228$</td></tr>
+            <tr><td>Q3</td><td>$(-\infty, -2)$</td><td>Q13</td><td>$1 - \frac{x^2}{2} + \frac{x^4}{24}$</td><td>Q23</td><td>C) $x+y+z=1$</td><td>Q33</td><td>$2$ s</td></tr>
+            <tr><td>Q4</td><td>$\ln(x+\sqrt{x^2+1})$</td><td>Q14</td><td>$y = K e^{x^2}$</td><td>Q24</td><td>$\begin{pmatrix}0&-1\\1&0\end{pmatrix}$</td><td>Q34</td><td>$10\sqrt{2}$ m/s</td></tr>
+            <tr><td>Q5</td><td>$x = 1$</td><td>Q15</td><td>$4.5, -6$</td><td>Q25</td><td>$\frac{\sqrt{3}}{3}$</td><td>Q35</td><td>$5$ m/s²</td></tr>
+            <tr><td>Q6</td><td>$\frac{23}{3}$</td><td>Q16</td><td>$\approx 0.1667$</td><td>Q26</td><td>$2$</td><td>Q36</td><td>$\frac{\pi}{5}$ s</td></tr>
+            <tr><td>Q7</td><td>$\frac{1}{6}$</td><td>Q17</td><td>$\frac{mg\sin\theta\cos\theta}{M+m\sin^2\theta}$</td><td>Q27</td><td>B) $\frac{10!}{2!2!2!}$</td><td>Q37</td><td>B) Stick together</td></tr>
+            <tr><td>Q8</td><td>$\frac{4}{\sqrt{3}} \times \frac{8}{3}$</td><td>Q18</td><td>$2$</td><td>Q28</td><td>$0.4$</td><td>Q38</td><td>$10$ m/s</td></tr>
+            <tr><td>Q9</td><td>$\frac{2}{9}$</td><td>Q19</td><td>$(4,-5,-6)$</td><td>Q29</td><td>$\frac{1}{9}, 2.25$</td><td>Q39</td><td>$2^{-5/3}$</td></tr>
+            <tr><td>Q10</td><td>$-0.375$ m/s</td><td>Q20</td><td>$9$</td><td>Q30</td><td>$\frac{5}{16}$</td><td>Q40</td><td>$\sqrt{GM/R}$</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- REFERENCES -->
+<div class="page">
+    <h1>References and Copyright Notice</h1>
+    <ul style="font-size: 0.88em; color: #555;">
+        <li>This study material is <strong>not</strong> an official ETH Zürich document. It is an independent preparation guide.</li>
+        <li><strong>Questions:</strong> All questions in this document are <strong>original and adapted</strong> problems in the ETH/Matura style.</li>
+        <li><strong>References:</strong> ETH Aufnahmeprüfung archive, GitHub <em>janikschuettler/eth-entrance-exam</em>, AKAD, Mathe-Physik-Aufgaben.</li>
+        <li><strong>Typesetting:</strong> MathJax (Apache 2.0) CDN.</li>
+        <li><strong>License:</strong> This document may be distributed freely. Commercial sale is not permitted.</li>
+        <li><strong>Contact:</strong> Prepared by FFWeath with the help of ai tools (September 2026).</li>
+    </ul>
+</div>
+
+</div>
+</body>
+</html>

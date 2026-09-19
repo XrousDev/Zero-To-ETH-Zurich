@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ETH ZÜRICH 5-YEAR PREPARATION GUIDE AND QUESTION BANK – PART 3</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true }, options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] } };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+:root { --eth-blue: #00305e; --eth-light-blue: #0072c6; --bg-color: #f4f6f8; --text-color: #333; --border-color: #ddd; --grid-line: #b8d4e8; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: var(--text-color); line-height: 1.4; background-color: #555; padding: 20px; }
+.document { max-width: 210mm; margin: 0 auto; background: #fff; box-shadow: 0 0 15px rgba(0,0,0,0.2); counter-reset: page; }
+.page { padding: 10mm 15mm; position: relative; page-break-after: always; break-after: page; }
+.page:last-child { page-break-after: auto; break-after: auto; }
+.page::after { content: counter(page); counter-increment: page; position: absolute; bottom: 5mm; right: 10mm; font-size: 10px; color: #888; }
+.cover { min-height: 250mm; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.cover::after { content: none; }
+.cover h1 { font-size: 2.1em; color: var(--eth-blue); margin-bottom: 10px; border-bottom: 3px solid var(--eth-light-blue); padding-bottom: 10px; }
+.cover h2 { font-size: 1.25em; color: var(--eth-light-blue); margin-bottom: 40px; font-weight: normal; }
+.cover .meta { font-size: 1em; }
+h1, h2, h3, h4 { color: var(--eth-blue); }
+h1 { border-bottom: 2px solid var(--eth-blue); padding-bottom: 4px; font-size: 1.45em; margin-bottom: 10px; }
+h2 { font-size: 1.15em; margin-top: 12px; margin-bottom: 6px; }
+h3 { font-size: 1em; color: var(--eth-light-blue); margin-top: 10px; margin-bottom: 5px; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 10px; font-size: 0.85em; }
+th, td { border: 1px solid var(--border-color); padding: 4px 6px; text-align: left; vertical-align: top; }
+th { background-color: var(--eth-blue); color: #fff; }
+.print-btn { position: fixed; top: 20px; right: 20px; background: #d9381e; color: #fff; border: none; padding: 10px 16px; font-size: 14px; font-weight: bold; cursor: pointer; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); z-index: 1000; }
+.print-btn:hover { background: #b02a15; }
+.q-box { background: var(--bg-color); border-left: 4px solid var(--eth-light-blue); padding: 8px 10px; margin-bottom: 6px; border-radius: 0 5px 5px 0; }
+.sol-box { border: 1px dashed var(--border-color); padding: 7px 10px; margin-bottom: 6px; background: #fafafa; font-size: 0.85em; }
+.grid-area { height: 26mm; margin-bottom: 10px; border: 1px solid var(--grid-line); background-color: #ffffff; background-image: linear-gradient(to right, var(--grid-line) 1px, transparent 1px), linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px); background-size: 5mm 5mm; background-position: 0 0; position: relative; }
+.grid-area::before { content: "✍️ Working space"; position: absolute; top: 1mm; left: 2mm; font-size: 8px; color: #7a9bbf; }
+.question-block { break-inside: avoid; page-break-inside: avoid; display: block; margin-bottom: 8px; }
+.badge { display: inline-block; padding: 2px 6px; border-radius: 10px; font-size: 0.7em; font-weight: bold; margin-right: 4px; margin-bottom: 4px; }
+.badge.hard { background: #ffcccc; color: #990000; }
+.badge.med { background: #fff0cc; color: #996600; }
+.badge.easy { background: #cce6ff; color: #004080; }
+.badge.topic { background: var(--eth-blue); color: #fff; }
+.badge.de { background: #e2d4f0; color: #4a1e80; }
+.q-text { margin-bottom: 4px; font-size: 0.9em; }
+.tip { background: #e6f0fa; border-left: 3px solid var(--eth-blue); padding: 5px 9px; margin-top: 6px; font-size: 0.82em; }
+.series-warning { background: #fff8e1; border-left: 5px solid #f0a500; padding: 14px; margin: 10px 0; border-radius: 0 8px 8px 0; }
+.series-warning h2 { color: #b37400; margin-top: 0; }
+.editable-hint { font-size: 0.82em; color: #777; font-style: italic; margin-bottom: 6px; }
+[contenteditable="true"] { background: #fdfdfd; border-bottom: 1px dotted #bbb; min-height: 16px; padding: 2px; }
+[contenteditable="true"]:focus { background: #f0f8ff; outline: none; }
+ul, ol { padding-left: 18px; margin-bottom: 6px; }
+p { margin-bottom: 6px; }
+@page { size: A4; margin: 10mm; }
+@media print {
+    body { background: #fff; padding: 0; }
+    .document { box-shadow: none; max-width: 100%; margin: 0; }
+    .print-btn { display: none; }
+    .page { padding: 0; page-break-after: always; break-after: page; }
+    .page:last-child { page-break-after: auto; break-after: auto; }
+    .q-box, .sol-box, .grid-area, .question-block, .series-warning { break-inside: avoid; page-break-inside: avoid; }
+    .grid-area { background-color: #ffffff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    [contenteditable="true"] { background: transparent; border-bottom: 1px dotted #bbb; }
+    h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
+}
+</style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+
+<div class="document">
+
+<!-- COVER -->
+<div class="page cover">
+    <h1>ETH ZÜRICH 5-YEAR PREPARATION GUIDE AND QUESTION BANK</h1>
+    <h2>PART 3: Advanced Mathematics, Advanced Physics &amp; German C1 — 40 Questions</h2>
+    <div class="meta">
+        <p><strong>Author:</strong> FF_Weath</p>
+        <p><strong>Date:</strong> September 2026</p>
+        <p><em>Series Book 3 — Advanced Multi-Disciplinary Question Bank</em></p>
+    </div>
+</div>
+
+<!-- SERIES WARNING -->
+<div class="page">
+    <div class="series-warning">
+        <h2>⚠️ This Document is Part of a Series</h2>
+        <p>This file is the <strong>3rd part</strong> of the <strong>ETH Zürich 5-Year Preparation Guide and Question Bank</strong> series. The complete series:</p>
+        <ul>
+            <li><strong>Part 1:</strong> General tactics, study plan, 5-year roadmap, mathematics and foundational physics.</li>
+            <li><strong>Part 2:</strong> Physics (electricity, magnetism, thermodynamics, waves), biology, chemistry, German language.</li>
+            <li><strong>Part 3:</strong> Advanced mathematics (calculus, ODEs, linear algebra, complex analysis), advanced physics (relativity, quantum basics, Lagrangian, Maxwell), and German C1 academic reading/writing.</li>
+            <li><strong>Part 4:</strong> Mixed mock exams and exam strategies.</li>
+        </ul>
+        <p><strong>Important:</strong> It is strongly recommended to download and study the entire series, not just this part.</p>
+    </div>
+</div>
+
+<!-- TOC -->
+<div class="page">
+    <h1>Table of Contents</h1>
+    <ul>
+        <li><strong>Section 1:</strong> Personal Study Plan (Editable)</li>
+        <li><strong>Section 2:</strong> Advanced Mathematics — Calculus, ODEs, Linear Algebra, Complex Analysis (Q1–Q12)</li>
+        <li><strong>Section 3:</strong> Advanced Physics — Special Relativity, Quantum Basics, Lagrangian Mechanics, Maxwell (Q13–Q22)</li>
+        <li><strong>Section 4:</strong> German C1 — Academic Reading, Grammar, Writing (Q23–Q32)</li>
+        <li><strong>Section 5:</strong> Mixed Advanced Problems (Q33–Q40)</li>
+        <li><strong>Answer Key:</strong> Q1–Q40</li>
+        <li><strong>Last Page:</strong> References and Copyright Notice</li>
+    </ul>
+</div>
+
+<!-- SECTION 1: PERSONAL PLAN -->
+<div class="page">
+    <h1>Section 1: Your Personal Study Plan</h1>
+    <p class="editable-hint">This section is yours. Click any cell and type. Editable in the browser.</p>
+
+    <h3>My Weekly Schedule</h3>
+    <table>
+        <thead><tr><th>Day</th><th>Subject Focus</th><th>Daily Task</th><th>Time</th></tr></thead>
+        <tbody>
+            <tr><td contenteditable="true">Monday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">30 min</td></tr>
+            <tr><td contenteditable="true">Tuesday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">30 min</td></tr>
+            <tr><td contenteditable="true">Wednesday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">30 min</td></tr>
+            <tr><td contenteditable="true">Thursday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">30 min</td></tr>
+            <tr><td contenteditable="true">Friday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">30 min</td></tr>
+            <tr><td contenteditable="true">Saturday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">30 min</td></tr>
+            <tr><td contenteditable="true">Sunday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">Rest</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Error Log</h3>
+    <table>
+        <thead><tr><th>Date</th><th>Question / Topic</th><th>Error Cause</th><th>Review</th></tr></thead>
+        <tbody>
+            <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">☐</td></tr>
+            <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">☐</td></tr>
+            <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">☐</td></tr>
+            <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">☐</td></tr>
+        </tbody>
+    </table>
+
+    <h3>My Notes</h3>
+    <div class="grid-area" style="height: 50mm;"></div>
+</div>
+
+<!-- SECTION 2: ADVANCED MATH -->
+<div class="page">
+    <h1>Section 2: Advanced Mathematics (Q1–Q12)</h1>
+    <p>This section goes beyond standard high school calculus: integration techniques, ODEs, linear algebra, and complex analysis — at ETH Zürich entrance level.</p>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q1</span> <span class="badge hard">Hard</span> <span class="badge">Integration by Parts</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> Evaluate $\int_0^{\pi/2} x \cos(x)\,dx$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Berechnen Sie $\int_0^{\pi/2} x \cos(x)\,dx$.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> Use integration by parts with $u = x$, $dv = \cos(x)dx$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $[x\sin(x) + \cos(x)]_0^{\pi/2} = \frac{\pi}{2} - 1$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q2</span> <span class="badge hard">Hard</span> <span class="badge">Improper Integral</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> Evaluate $\int_1^\infty \frac{1}{x^2}\,dx$ and determine whether it converges.</div>
+            <div class="q-text"><span class="lang">DE:</span> Berechnen Sie $\int_1^\infty \frac{1}{x^2}\,dx$ und prüfen Sie die Konvergenz.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> Compute the finite integral $\int_1^t$ and take the limit $t \to \infty$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> Converges to $1$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q3</span> <span class="badge hard">Hard</span> <span class="badge">Series</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> Determine whether $\sum_{n=1}^{\infty} \frac{1}{n^2}$ converges and find its sum.</div>
+            <div class="q-text"><span class="lang">DE:</span> Untersuchen Sie die Konvergenz von $\sum_{n=1}^{\infty} \frac{1}{n^2}$ und bestimmen Sie die Summe.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> This is the Basel problem — converges to $\pi^2/6$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> Converges; sum = $\pi^2/6$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q4</span> <span class="badge hard">Hard</span> <span class="badge">ODE</span> <span class="badge">12m</span>
+            <div class="q-text"><span class="lang">EN:</span> Solve the ODE $y' + 2y = e^{-x}$ with $y(0) = 1$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Lösen Sie die DGL $y' + 2y = e^{-x}$ mit $y(0) = 1$.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> Use an integrating factor $\mu(x) = e^{2x}$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $y = e^{-x} + C e^{-2x}$; with $y(0)=1$: $y = e^{-x}$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q5</span> <span class="badge hard">Hard</span> <span class="badge">Linear Algebra</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> Find the determinant of $A = \begin{pmatrix} 2 & 1 & 0 \\ 1 & 3 & 4 \\ 0 & 1 & 2 \end{pmatrix}$ and determine if $A$ is invertible.</div>
+            <div class="q-text"><span class="lang">DE:</span> Bestimmen Sie die Determinante von $A$ und prüfen Sie die Invertierbarkeit.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\det A = 2(3\cdot2 - 4\cdot1) - 1(1\cdot2 - 0) = 2(2) - 2 = 2$. Invertible.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q6</span> <span class="badge hard">Hard</span> <span class="badge">Eigenvalues</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> Find the eigenvalues and eigenvectors of $A = \begin{pmatrix} 0 & 1 \\ -2 & -3 \end{pmatrix}$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Bestimmen Sie Eigenwerte und Eigenvektoren.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> Solve $\det(A - \lambda I) = 0$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\lambda_1 = -1$, $\lambda_2 = -2$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q7</span> <span class="badge hard">Hard</span> <span class="badge">Complex</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> Express $z = 1 + i\sqrt{3}$ in polar form and compute $z^6$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Schreiben Sie $z = 1 + i\sqrt{3}$ in Polarform und berechnen Sie $z^6$.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $r = 2$, $\theta = \pi/3$. Then use De Moivre.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $z = 2 e^{i\pi/3}$, $z^6 = 64 e^{i2\pi} = 64$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q8</span> <span class="badge hard">Hard</span> <span class="badge">Taylor Series</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> Find the Taylor series of $f(x) = \ln(1+x)$ centered at $x=0$ up to order 4.</div>
+            <div class="q-text"><span class="lang">DE:</span> Bestimmen Sie die Taylor-Reihe von $f(x) = \ln(1+x)$ bis Ordnung 4.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \dots$</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q9</span> <span class="badge hard">Hard</span> <span class="badge">Partial Derivatives</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> For $f(x,y) = x^2 y + y^3$, find $\partial f/\partial x$, $\partial f/\partial y$, and the total differential $df$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Für $f(x,y) = x^2 y + y^3$: Bestimmen Sie die partiellen Ableitungen und das totale Differential.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\partial f/\partial x = 2xy$, $\partial f/\partial y = x^2 + 3y^2$, $df = 2xy\,dx + (x^2+3y^2)\,dy$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q10</span> <span class="badge hard">Hard</span> <span class="badge">Lagrange Multipliers</span> <span class="badge">12m</span>
+            <div class="q-text"><span class="lang">EN:</span> Maximize $f(x,y) = xy$ subject to the constraint $x + y = 10$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Maximieren Sie $f(x,y) = xy$ unter der Nebenbedingung $x + y = 10$.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> Set up $\nabla f = \lambda \nabla g$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $x = y = 5$, maximum value $25$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q11</span> <span class="badge hard">Hard</span> <span class="badge">Matrix Inverse</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> Find the inverse of $A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Bestimmen Sie die Inverse von $A$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $A^{-1} = \frac{1}{-2}\begin{pmatrix} 4 & -2 \\ -3 & 1 \end{pmatrix} = \begin{pmatrix} -2 & 1 \\ 1.5 & -0.5 \end{pmatrix}$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q12</span> <span class="badge hard">Hard</span> <span class="badge">Double Integral</span> <span class="badge">12m</span>
+            <div class="q-text"><span class="lang">EN:</span> Evaluate $\iint_D (x + y)\,dA$ where $D = [0,1]\times[0,2]$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Berechnen Sie $\iint_D (x + y)\,dA$ über $D = [0,1]\times[0,2]$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\int_0^2\int_0^1 (x+y)\,dx\,dy = \int_0^2 (\tfrac{1}{2} + y)\,dy = 1 + 2 = 3$.</div>
+        <div class="grid-area"></div>
+    </div>
+</div>
+
+<!-- SECTION 3: ADVANCED PHYSICS -->
+<div class="page">
+    <h1>Section 3: Advanced Physics (Q13–Q22)</h1>
+    <p>Special relativity, quantum basics, Lagrangian mechanics, and Maxwell's equations — at ETH entrance level.</p>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q13</span> <span class="badge hard">Hard</span> <span class="badge">Relativity</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> A spaceship moves at $0.8c$. Calculate the Lorentz factor $\gamma$ and the time dilation for 1 year of ship time.</div>
+            <div class="q-text"><span class="lang">DE:</span> Ein Raumschiff fliegt mit $0.8c$. Berechnen Sie $\gamma$ und die Zeitdilatation.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $\gamma = 1/\sqrt{1 - v^2/c^2}$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\gamma = 5/3 \approx 1.667$. Earth time = 1.667 years.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q14</span> <span class="badge hard">Hard</span> <span class="badge">Photoelectric</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> Light of wavelength 400 nm hits a metal with work function 2.0 eV. Find the maximum kinetic energy of the emitted electron.</div>
+            <div class="q-text"><span class="lang">DE:</span> Licht der Wellenlänge 400 nm trifft ein Metall mit Austrittsarbeit 2.0 eV. Bestimmen Sie die maximale kinetische Energie.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $E = hf = hc/\lambda$; then $K_{max} = E - W$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $E \approx 3.1$ eV, so $K_{max} \approx 1.1$ eV.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q15</span> <span class="badge hard">Hard</span> <span class="badge">de Broglie</span> <span class="badge">8m</span>
+            <div class="q-text"><span class="lang">EN:</span> Find the de Broglie wavelength of an electron with kinetic energy 100 eV.</div>
+            <div class="q-text"><span class="lang">DE:</span> Bestimmen Sie die de-Broglie-Wellenlänge eines Elektrons mit 100 eV kinetischer Energie.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $\lambda = h / \sqrt{2mK}$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\lambda \approx 1.23 \cdot 10^{-10}$ m $\approx 0.123$ nm.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q16</span> <span class="badge hard">Hard</span> <span class="badge">Lagrangian</span> <span class="badge">12m</span>
+            <div class="q-text"><span class="lang">EN:</span> Write the Lagrangian for a simple pendulum of length $L$ and mass $m$, then derive its equation of motion.</div>
+            <div class="q-text"><span class="lang">DE:</span> Schreiben Sie die Lagrange-Funktion eines Pendels der Länge $L$ und Masse $m$ und leiten Sie die Bewegungsgleichung her.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $L = T - V$; then Euler–Lagrange: $d/dt(\partial L/\partial \dot\theta) - \partial L/\partial\theta = 0$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\ddot\theta + (g/L)\sin\theta = 0$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q17</span> <span class="badge hard">Hard</span> <span class="badge">Maxwell</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> State Maxwell's four equations in integral form and briefly explain the physical meaning of each.</div>
+            <div class="q-text"><span class="lang">DE:</span> Geben Sie die vier Maxwell-Gleichungen in Integralform an und erklären Sie deren physikalische Bedeutung.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> Gauss (electric), Gauss (magnetic), Faraday, Ampère–Maxwell.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q18</span> <span class="badge hard">Hard</span> <span class="badge">Entropy</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> Calculate the change in entropy when 1 kg of ice at 0°C melts into water at 0°C. (Latent heat $L_f = 334$ kJ/kg.)</div>
+            <div class="q-text"><span class="lang">DE:</span> Berechnen Sie die Entropieänderung beim Schmelzen von 1 kg Eis bei 0°C. ($L_f = 334$ kJ/kg)</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\Delta S = Q/T = (334000)/(273.15) \approx 1223$ J/K.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q19</span> <span class="badge hard">Hard</span> <span class="badge">Schrödinger</span> <span class="badge">12m</span>
+            <div class="q-text"><span class="lang">EN:</span> Write the time-independent Schrödinger equation for a particle in a 1D box of length $L$ and give its ground-state energy.</div>
+            <div class="q-text"><span class="lang">DE:</span> Schreiben Sie die zeitunabhängige Schrödinger-Gleichung für ein Teilchen im 1D-Kasten der Länge $L$ und geben Sie die Grundzustandsenergie an.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2} = E\psi$, $E_1 = \frac{\hbar^2\pi^2}{2mL^2}$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q20</span> <span class="badge hard">Hard</span> <span class="badge">Relativistic Energy</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> Calculate the rest energy of an electron (mass $9.11 \cdot 10^{-31}$ kg) in joules and in MeV.</div>
+            <div class="q-text"><span class="lang">DE:</span> Berechnen Sie die Ruheenergie eines Elektrons in Joule und MeV.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $E = mc^2 \approx 8.19 \cdot 10^{-14}$ J $\approx 0.511$ MeV.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q21</span> <span class="badge hard">Hard</span> <span class="badge">Waves</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> Two coherent waves with the same frequency interfere. Write the condition for constructive and destructive interference.</div>
+            <div class="q-text"><span class="lang">DE:</span> Zwei kohärente Wellen interferieren. Geben Sie die Bedingungen für konstruktive und destruktive Interferenz an.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> Constructive: $\Delta = n\lambda$; Destructive: $\Delta = (n + \tfrac{1}{2})\lambda$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q22</span> <span class="badge hard">Hard</span> <span class="badge">Statistical Physics</span> <span class="badge">12m</span>
+            <div class="q-text"><span class="lang">EN:</span> State the Boltzmann distribution and explain what the partition function $Z$ represents.</div>
+            <div class="q-text"><span class="lang">DE:</span> Geben Sie die Boltzmann-Verteilung an und erklären Sie die Zustandssumme $Z$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $P_i = e^{-E_i/kT}/Z$, with $Z = \sum_i e^{-E_i/kT}$.</div>
+        <div class="grid-area"></div>
+    </div>
+</div>
+
+<!-- SECTION 4: GERMAN C1 -->
+<div class="page">
+    <h1>Section 4: German C1 – Academic Reading, Grammar, Writing (Q23–Q32)</h1>
+    <p>Auf dem C1-Niveau. Diese Fragen entsprechen dem Standard der ETH Zürich Aufnahmeprüfung im Fach Deutsch.</p>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q23</span> <span class="badge de">DE</span> <span class="badge hard">Schwer</span> <span class="badge">Leseverstehen</span> <span class="badge">10m</span>
+            <div class="q-text">Lesen Sie den Text und beantworten Sie die Frage.</div>
+            <div class="q-text"><em>„Die rasante Entwicklung der künstlichen Intelligenz wirft grundlegende Fragen auf: Wie viel Autonomie dürfen Maschinen erhalten? Wer haftet, wenn ein autonomes System Schaden verursacht? Und wie lassen sich ethische Prinzipien in algorithmische Entscheidungen übersetzen?“</em></div>
+            <div class="q-text"><strong>Frage:</strong> Welche drei Fragen werden im Text aufgeworfen?</div>
+        </div>
+        <div class="sol-box"><strong>Lösung:</strong> Autonomie, Haftung, ethische Übersetzung.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q24</span> <span class="badge de">DE</span> <span class="badge hard">Schwer</span> <span class="badge">Textanalyse</span> <span class="badge">10m</span>
+            <div class="q-text">Analysieren Sie den folgenden Satz grammatisch und inhaltlich:</div>
+            <div class="q-text"><em>„Je komplexer die Technologie wird, desto wichtiger wird die Frage nach Verantwortung.“</em></div>
+            <div class="tip">💡 <strong>Strategie:</strong> „je … desto …“ ist eine Korrelation. Beachten Sie die Wortstellung in beiden Teilsätzen.</div>
+        </div>
+        <div class="sol-box"><strong>Lösung:</strong> Je-Satz: Verb am Ende; desto-Satz: Verb an zweiter Stelle. Bedeutung: proportionaler Zusammenhang.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q25</span> <span class="badge de">DE</span> <span class="badge hard">Schwer</span> <span class="badge">Grammatik</span> <span class="badge">6m</span>
+            <div class="q-text">Bilden Sie das Passiv Präsens:</div>
+            <div class="q-text">„Die Forscher analysieren die Daten.“ → „Die Daten ___ von den Forschern ___.“</div>
+            <div class="q-text">A) ist / analysiert &nbsp; B) werden / analysiert &nbsp; C) wurde / analysiert &nbsp; D) hat / analysiert</div>
+        </div>
+        <div class="sol-box"><strong>Lösung:</strong> B) werden / analysiert.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q26</span> <span class="badge de">DE</span> <span class="badge hard">Schwer</span> <span class="badge">Konjunktiv II</span> <span class="badge">7m</span>
+            <div class="q-text">Bilden Sie den Konjunktiv II der Vergangenheit:</div>
+            <div class="q-text">„Wenn ich das früher gewusst ___, ___ ich anders gehandelt.“</div>
+            <div class="q-text">A) hätte / hätte &nbsp; B) hätte / würde &nbsp; C) wäre / hätte &nbsp; D) würde / hätte</div>
+        </div>
+        <div class="sol-box"><strong>Lösung:</strong> A) hätte / hätte.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q27</span> <span class="badge de">DE</span> <span class="badge hard">Schwer</span> <span class="badge">Nominalisierung</span> <span class="badge">7m</span>
+            <div class="q-text">Nominalisieren Sie den folgenden Satz:</div>
+            <div class="q-text">„Weil die Temperaturen steigen, schmelzen die Gletscher.“ → „___ der Temperaturen ___ das Schmelzen der Gletscher.“</div>
+        </div>
+        <div class="sol-box"><strong>Lösung:</strong> „Aufgrund des Anstiegs der Temperaturen erfolgt das Schmelzen der Gletscher.“</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q28</span> <span class="badge de">DE</span> <span class="badge hard">Schwer</span> <span class="badge">Partizipien</span> <span class="badge">6m</span>
+            <div class="q-text">Bilden Sie das Partizip II und das Partizip Präsens:</div>
+            <div class="q-text">„entwickeln“ → Partizip II: ___ ; Partizip Präsens: ___</div>
+        </div>
+        <div class="sol-box"><strong>Lösung:</strong> entwickelt / entwickelnd.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q29</span> <span class="badge de">DE</span> <span class="badge hard">Schwer</span> <span class="badge">Adjektivendungen</span> <span class="badge">7m</span>
+            <div class="q-text">Ergänzen Sie die richtigen Endungen:</div>
+            <div class="q-text">„Mit ein___ neu___ Methode lassen sich komplex___ Problem___ effizient lösen.“</div>
+            <div class="q-text">A) -er / -en / -e / -e &nbsp; B) -e / -e / -en / -e &nbsp; C) -er / -en / -e / -e &nbsp; D) -em / -en / -e / -e</div>
+        </div>
+        <div class="sol-box"><strong>Lösung:</strong> A) -er / -en / -e / -e.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q30</span> <span class="badge de">DE</span> <span class="badge hard">Schwer</span> <span class="badge">Erörterung</span> <span class="badge">20m</span>
+            <div class="q-text">Schreiben Sie eine Erörterung (ca. 200 Wörter) zum Thema: <em>„Sollte künstliche Intelligenz in der Schule als Lernwerkzeug eingesetzt werden?“</em> Struktur: Einleitung, Pro, Contra, Schluss mit eigener Meinung.</div>
+        </div>
+        <div class="sol-box"><strong>Hinweis:</strong> Freies Schreiben – benutzen Sie die karierte Fläche unten.</div>
+        <div class="grid-area" style="height: 100mm;"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q31</span> <span class="badge de">DE</span> <span class="badge hard">Schwer</span> <span class="badge">Zusammenfassung</span> <span class="badge">15m</span>
+            <div class="q-text">Fassen Sie den folgenden Text in 3–4 Sätzen zusammen:</div>
+            <div class="q-text"><em>„Die Digitalisierung hat die Arbeitswelt grundlegend verändert. Während repetitive Tätigkeiten zunehmend automatisiert werden, entstehen neue Berufsfelder, die kreatives Denken und interdisziplinäre Kompetenzen erfordern. Bildungssysteme müssen sich anpassen, um Schülerinnen und Schüler auf diese veränderte Welt vorzubereiten.“</em></div>
+        </div>
+        <div class="sol-box"><strong>Hinweis:</strong> Freies Schreiben.</div>
+        <div class="grid-area" style="height: 60mm;"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q32</span> <span class="badge de">DE</span> <span class="badge hard">Schwer</span> <span class="badge">Wortschatz</span> <span class="badge">8m</span>
+            <div class="q-text">Erklären Sie die folgenden Begriffe auf Deutsch:</div>
+            <div class="q-text">1) Nachhaltigkeit &nbsp; 2) Wahrscheinlichkeit &nbsp; 3) Verantwortung &nbsp; 4) Zusammenhang</div>
+        </div>
+        <div class="sol-box"><strong>Lösung:</strong> Siehe Wörterbuch – freie Erklärung.</div>
+        <div class="grid-area"></div>
+    </div>
+</div>
+
+<!-- SECTION 5: MIXED ADVANCED -->
+<div class="page">
+    <h1>Section 5: Mixed Advanced Problems (Q33–Q40)</h1>
+    <p>These questions combine mathematics, physics, and German language skills. They reflect the interdisciplinary nature of the ETH Zürich entrance exam.</p>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q33</span> <span class="badge hard">Hard</span> <span class="badge">Mixed</span> <span class="badge">12m</span>
+            <div class="q-text"><span class="lang">EN:</span> A radioactive sample decays according to $N(t) = N_0 e^{-\lambda t}$. Given a half-life of 5 days, find $\lambda$ and the time for the sample to decay to 10% of its original value.</div>
+            <div class="q-text"><span class="lang">DE:</span> Eine radioaktive Probe zerfällt nach $N(t) = N_0 e^{-\lambda t}$. Halbwertszeit 5 Tage. Bestimmen Sie $\lambda$ und die Zeit bis auf 10%.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $\lambda = \ln 2 / T_{1/2}$; then solve $N(t)/N_0 = 0.1$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\lambda \approx 0.1386$ /day; $t \approx 16.6$ days.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q34</span> <span class="badge hard">Hard</span> <span class="badge">Mixed</span> <span class="badge">12m</span>
+            <div class="q-text"><span class="lang">EN:</span> A projectile's height is given by $h(t) = -5t^2 + 20t + 1$ (m). Find the maximum height, the time to reach it, and the impact velocity when $h = 0$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Die Höhe eines Projektils: $h(t) = -5t^2 + 20t + 1$. Bestimmen Sie maximale Höhe, Zeitpunkt und Aufprallgeschwindigkeit.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $t = 2$ s, $h_{max} = 21$ m; impact at $t \approx 4.05$ s, $v \approx -20.5$ m/s.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q35</span> <span class="badge hard">Hard</span> <span class="badge">Mixed</span> <span class="badge">12m</span>
+            <div class="q-text"><span class="lang">EN:</span> Compute the area bounded by $y = \sin(x)$ and the x-axis from $x = 0$ to $x = \pi$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Berechnen Sie die Fläche zwischen $y = \sin(x)$ und der x-Achse von $x = 0$ bis $x = \pi$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\int_0^\pi \sin(x)dx = 2$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q36</span> <span class="badge hard">Hard</span> <span class="badge">Mixed</span> <span class="badge">12m</span>
+            <div class="q-text"><span class="lang">EN:</span> Explain in German (5–6 sentences) why mathematics is essential for computer science.</div>
+            <div class="q-text"><span class="lang">DE:</span> Erklären Sie auf Deutsch (5–6 Sätze), warum Mathematik für die Informatik unverzichtbar ist.</div>
+        </div>
+        <div class="sol-box"><strong>Hinweis:</strong> Freies Schreiben.</div>
+        <div class="grid-area" style="height: 50mm;"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q37</span> <span class="badge hard">Hard</span> <span class="badge">Mixed</span> <span class="badge">10m</span>
+            <div class="q-text"><span class="lang">EN:</span> For a data set with mean 50 and standard deviation 10, what is the z-score of an observation at 75?</div>
+            <div class="q-text"><span class="lang">DE:</span> Für einen Datensatz mit Mittelwert 50 und Standardabweichung 10: Wie lautet der z-Wert für 75?</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $z = (75-50)/10 = 2.5$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q38</span> <span class="badge hard">Hard</span> <span class="badge">Mixed</span> <span class="badge">12m</span>
+            <div class="q-text"><span class="lang">EN:</span> A particle moves along the x-axis with velocity $v(t) = 3t^2 - 6t$ m/s. Find its displacement and total distance from $t=0$ to $t=3$.</div>
+            <div class="q-text"><span class="lang">DE:</span> Ein Teilchen bewegt sich mit $v(t) = 3t^2 - 6t$. Bestimmen Sie Verschiebung und zurückgelegten Weg von $t=0$ bis $t=3$.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> Displacement $= \int_0^3 v\,dt$; distance $= \int_0^3 |v|\,dt$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> Displacement $= 0$; distance $= 8$ m.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q39</span> <span class="badge hard">Hard</span> <span class="badge">Mixed</span> <span class="badge">12m</span>
+            <div class="q-text"><span class="lang">EN:</span> Use Newton's method to approximate a root of $f(x) = x^3 - 2x - 5$ starting from $x_0 = 2$. Do two iterations.</div>
+            <div class="q-text"><span class="lang">DE:</span> Verwenden Sie das Newton-Verfahren für $f(x) = x^3 - 2x - 5$ mit $x_0 = 2$. Zwei Iterationen.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $x_1 \approx 2.1$, $x_2 \approx 2.0946$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q40</span> <span class="badge hard">Hard</span> <span class="badge">Mixed</span> <span class="badge">15m</span>
+            <div class="q-text"><span class="lang">EN:</span> Write a short academic paragraph in German (about 80 words) on the topic: “The role of mathematics in artificial intelligence.”</div>
+            <div class="q-text"><span class="lang">DE:</span> Schreiben Sie einen kurzen akademischen Absatz auf Deutsch (ca. 80 Wörter) zum Thema: „Die Rolle der Mathematik in der künstlichen Intelligenz.“</div>
+        </div>
+        <div class="sol-box"><strong>Hinweis:</strong> Freies Schreiben.</div>
+        <div class="grid-area" style="height: 50mm;"></div>
+    </div>
+</div>
+
+<!-- ANSWER KEY -->
+<div class="page">
+    <h1>Answer Key (Q1 – Q40)</h1>
+    <table style="font-size: 0.78em;">
+        <thead><tr><th>Q</th><th>Answer</th><th>Q</th><th>Answer</th><th>Q</th><th>Answer</th><th>Q</th><th>Answer</th></tr></thead>
+        <tbody>
+            <tr><td>Q1</td><td>$\pi/2 - 1$</td><td>Q11</td><td>$\begin{pmatrix}-2&1\\1.5&-0.5\end{pmatrix}$</td><td>Q21</td><td>$\Delta = n\lambda$ / $(n+\frac12)\lambda$</td><td>Q31</td><td>Free writing</td></tr>
+            <tr><td>Q2</td><td>Converges to 1</td><td>Q12</td><td>$3$</td><td>Q22</td><td>$P_i = e^{-E_i/kT}/Z$</td><td>Q32</td><td>Free definitions</td></tr>
+            <tr><td>Q3</td><td>$\pi^2/6$</td><td>Q13</td><td>$\gamma = 5/3$; 1.667 y</td><td>Q23</td><td>Autonomy, liability, ethics</td><td>Q33</td><td>$\lambda \approx 0.1386$; $t \approx 16.6$ d</td></tr>
+            <tr><td>Q4</td><td>$y = e^{-x}$</td><td>Q14</td><td>$K_{max} \approx 1.1$ eV</td><td>Q24</td><td>Verb-final / Verb-second</td><td>Q34</td><td>$h_{max}=21$ m; $v \approx -20.5$ m/s</td></tr>
+            <tr><td>Q5</td><td>$\det A = 2$; invertible</td><td>Q15</td><td>$\lambda \approx 0.123$ nm</td><td>Q25</td><td>B) werden / analysiert</td><td>Q35</td><td>$2$</td></tr>
+            <tr><td>Q6</td><td>$\lambda \in \{-1, -2\}$</td><td>Q16</td><td>$\ddot\theta + (g/L)\sin\theta = 0$</td><td>Q26</td><td>A) hätte / hätte</td><td>Q36</td><td>Free writing (DE)</td></tr>
+            <tr><td>Q7</td><td>$z^6 = 64$</td><td>Q17</td><td>Four Maxwell equations</td><td>Q27</td><td>Nominalisierung</td><td>Q37</td><td>$z = 2.5$</td></tr>
+            <tr><td>Q8</td><td>$x - x^2/2 + x^3/3 - x^4/4$</td><td>Q18</td><td>$\Delta S \approx 1223$ J/K</td><td>Q28</td><td>entwickelt / entwickelnd</td><td>Q38</td><td>Displacement 0; distance 8 m</td></tr>
+            <tr><td>Q9</td><td>$2xy$, $x^2+3y^2$</td><td>Q19</td><td>$E_1 = \hbar^2\pi^2/(2mL^2)$</td><td>Q29</td><td>A) -er / -en / -e / -e</td><td>Q39</td><td>$x_2 \approx 2.0946$</td></tr>
+            <tr><td>Q10</td><td>Max at $x=y=5$, value 25</td><td>Q20</td><td>$0.511$ MeV</td><td>Q30</td><td>Free writing</td><td>Q40</td><td>Free writing (DE)</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- REFERENCES -->
+<div class="page">
+    <h1>References and Copyright Notice</h1>
+    <ul style="font-size: 0.88em; color: #555;">
+        <li>This study material is <strong>not</strong> an official ETH Zürich document. It is an independent preparation guide.</li>
+        <li><strong>Questions:</strong> All questions are <strong>original and adapted</strong> problems in the ETH/Matura style.</li>
+        <li><strong>References:</strong> ETH Aufnahmeprüfung archive, Halliday–Resnick, Tipler–Mosca, Papula, Stewart, Goethe-Institut materials.</li>
+        <li><strong>Typesetting:</strong> MathJax (Apache 2.0) CDN.</li>
+        <li><strong>License:</strong> This document may be distributed freely. Commercial sale is not permitted.</li>
+        <li><strong>Contact:</strong> Prepared by FFWeath with the help of ai tools (September 2026).</li>
+    </ul>
+</div>
+
+</div>
+</body>
+</html>

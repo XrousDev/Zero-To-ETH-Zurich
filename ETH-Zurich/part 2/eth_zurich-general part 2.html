@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ETH ZÜRICH 5-YEAR PREPARATION GUIDE AND QUESTION BANK – PART 2</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true }, options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] } };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+:root { --eth-blue: #00305e; --eth-light-blue: #0072c6; --bg-color: #f4f6f8; --text-color: #333; --border-color: #ddd; --grid-line: #b8d4e8; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: var(--text-color); line-height: 1.4; background-color: #555; padding: 20px; }
+.document { max-width: 210mm; margin: 0 auto; background: #fff; box-shadow: 0 0 15px rgba(0,0,0,0.2); counter-reset: page; }
+.page { padding: 10mm 15mm; position: relative; page-break-after: always; break-after: page; }
+.page:last-child { page-break-after: auto; break-after: auto; }
+.page::after { content: counter(page); counter-increment: page; position: absolute; bottom: 5mm; right: 10mm; font-size: 10px; color: #888; }
+.cover { min-height: 250mm; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.cover::after { content: none; }
+.cover h1 { font-size: 2.1em; color: var(--eth-blue); margin-bottom: 10px; border-bottom: 3px solid var(--eth-light-blue); padding-bottom: 10px; }
+.cover h2 { font-size: 1.25em; color: var(--eth-light-blue); margin-bottom: 40px; font-weight: normal; }
+.cover .meta { font-size: 1em; }
+h1, h2, h3, h4 { color: var(--eth-blue); }
+h1 { border-bottom: 2px solid var(--eth-blue); padding-bottom: 4px; font-size: 1.45em; margin-bottom: 10px; }
+h2 { font-size: 1.15em; margin-top: 12px; margin-bottom: 6px; }
+h3 { font-size: 1em; color: var(--eth-light-blue); margin-top: 10px; margin-bottom: 5px; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 10px; font-size: 0.85em; }
+th, td { border: 1px solid var(--border-color); padding: 4px 6px; text-align: left; vertical-align: top; }
+th { background-color: var(--eth-blue); color: #fff; }
+.print-btn { position: fixed; top: 20px; right: 20px; background: #d9381e; color: #fff; border: none; padding: 10px 16px; font-size: 14px; font-weight: bold; cursor: pointer; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); z-index: 1000; }
+.print-btn:hover { background: #b02a15; }
+.q-box { background: var(--bg-color); border-left: 4px solid var(--eth-light-blue); padding: 8px 10px; margin-bottom: 6px; border-radius: 0 5px 5px 0; }
+.sol-box { border: 1px dashed var(--border-color); padding: 7px 10px; margin-bottom: 6px; background: #fafafa; font-size: 0.85em; }
+.grid-area { height: 26mm; margin-bottom: 10px; border: 1px solid var(--grid-line); background-color: #ffffff; background-image: linear-gradient(to right, var(--grid-line) 1px, transparent 1px), linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px); background-size: 5mm 5mm; background-position: 0 0; position: relative; }
+.grid-area::before { content: "✍️ Working space"; position: absolute; top: 1mm; left: 2mm; font-size: 8px; color: #7a9bbf; }
+.question-block { break-inside: avoid; page-break-inside: avoid; display: block; margin-bottom: 8px; }
+.badge { display: inline-block; padding: 2px 6px; border-radius: 10px; font-size: 0.7em; font-weight: bold; margin-right: 4px; margin-bottom: 4px; }
+.badge.hard { background: #ffcccc; color: #990000; }
+.badge.med { background: #fff0cc; color: #996600; }
+.badge.easy { background: #cce6ff; color: #004080; }
+.badge.topic { background: var(--eth-blue); color: #fff; }
+.badge.de { background: #e2d4f0; color: #4a1e80; }
+.badge.bio { background: #d4edda; color: #155724; }
+.badge.chem { background: #f8d7da; color: #721c24; }
+.q-text { margin-bottom: 4px; font-size: 0.9em; }
+.tip { background: #e6f0fa; border-left: 3px solid var(--eth-blue); padding: 5px 9px; margin-top: 6px; font-size: 0.82em; }
+.series-warning { background: #fff8e1; border-left: 5px solid #f0a500; padding: 14px; margin: 10px 0; border-radius: 0 8px 8px 0; }
+.series-warning h2 { color: #b37400; margin-top: 0; }
+.editable-hint { font-size: 0.82em; color: #777; font-style: italic; margin-bottom: 6px; }
+[contenteditable="true"] { background: #fdfdfd; border-bottom: 1px dotted #bbb; min-height: 16px; padding: 2px; }
+[contenteditable="true"]:focus { background: #f0f8ff; outline: none; }
+ul, ol { padding-left: 18px; margin-bottom: 6px; }
+p { margin-bottom: 6px; }
+@page { size: A4; margin: 10mm; }
+@media print {
+    body { background: #fff; padding: 0; }
+    .document { box-shadow: none; max-width: 100%; margin: 0; }
+    .print-btn { display: none; }
+    .page { padding: 0; page-break-after: always; break-after: page; }
+    .page:last-child { page-break-after: auto; break-after: auto; }
+    .q-box, .sol-box, .grid-area, .question-block, .series-warning { break-inside: avoid; page-break-inside: avoid; }
+    .grid-area { background-color: #ffffff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    [contenteditable="true"] { background: transparent; border-bottom: 1px dotted #bbb; }
+    h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
+}
+</style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+
+<div class="document">
+
+<!-- COVER -->
+<div class="page cover">
+    <h1>ETH ZÜRICH 5-YEAR PREPARATION GUIDE AND QUESTION BANK</h1>
+    <h2>PART 2: Physics, Biology, Chemistry &amp; German — 40 Questions</h2>
+    <div class="meta">
+        <p><strong>Author:</strong> FF_Weath</p>
+        <p><strong>Date:</strong> September 2026</p>
+        <p><em>Series Book 2 — Multidisciplinary Question Bank</em></p>
+    </div>
+</div>
+
+<!-- SERIES WARNING -->
+<div class="page">
+    <div class="series-warning">
+        <h2>⚠️ This Document is Part of a Series</h2>
+        <p>This file is the <strong>2nd part</strong> of the <strong>ETH Zürich 5-Year Preparation Guide and Question Bank</strong> series. The complete series:</p>
+        <ul>
+            <li><strong>Part 1:</strong> General tactics, study plan, 5-year roadmap, mathematics and foundational physics.</li>
+            <li><strong>Part 2:</strong> Physics (electricity, magnetism, thermodynamics, waves), biology, chemistry, German language.</li>
+            <li><strong>Part 3:</strong> Advanced mathematics (calculus, ODEs, linear algebra, complex analysis), advanced physics (relativity, quantum basics, Lagrangian, Maxwell), and German C1 academic reading/writing.</li>
+            <li><strong>Part 4:</strong> Mixed mock exams and exam strategies.</li>
+        </ul>
+        <p><strong>Important:</strong> It is strongly recommended to study the series as a whole.</p>
+        <p><strong>Recommendation:</strong> Read the general tactics and study plan in Part 1 first. Then use each part to focus on the relevant subjects.</p>
+    </div>
+</div>
+
+<!-- TOC -->
+<div class="page">
+    <h1>Table of Contents</h1>
+    <ul>
+        <li><strong>Section 1:</strong> Personal Study Plan (Editable)</li>
+        <li><strong>Section 2:</strong> Physics – Electricity &amp; Magnetism (Q1–Q10)</li>
+        <li><strong>Section 3:</strong> Physics – Thermodynamics &amp; Waves (Q11–Q18)</li>
+        <li><strong>Section 4:</strong> Biology &amp; Chemistry (Q19–Q28)</li>
+        <li><strong>Section 5:</strong> German – Academic Reading, Grammar &amp; Writing (Q29–Q40)</li>
+        <li><strong>Answer Key:</strong> Q1–Q40</li>
+        <li><strong>Last Page:</strong> References &amp; Copyright Notice</li>
+    </ul>
+</div>
+
+<!-- SECTION 1: PERSONAL STUDY PLAN -->
+<div class="page">
+    <h1>Section 1: Your Personal Study Plan</h1>
+    <p class="editable-hint">This section is yours. Click any cell and type. Editable in the browser.</p>
+
+    <h3>My Weekly Schedule</h3>
+    <table>
+        <thead><tr><th>Day</th><th>Subject Focus</th><th>Daily Task</th><th>Time</th></tr></thead>
+        <tbody>
+            <tr><td contenteditable="true">Monday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">30 min</td></tr>
+            <tr><td contenteditable="true">Tuesday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">30 min</td></tr>
+            <tr><td contenteditable="true">Wednesday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">30 min</td></tr>
+            <tr><td contenteditable="true">Thursday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">30 min</td></tr>
+            <tr><td contenteditable="true">Friday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">30 min</td></tr>
+            <tr><td contenteditable="true">Saturday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">30 min</td></tr>
+            <tr><td contenteditable="true">Sunday</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">Rest</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Error Log</h3>
+    <table>
+        <thead><tr><th>Date</th><th>Question / Topic</th><th>Error Cause</th><th>Review</th></tr></thead>
+        <tbody>
+            <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">☐</td></tr>
+            <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">☐</td></tr>
+            <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">☐</td></tr>
+            <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">☐</td></tr>
+            <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true">☐</td></tr>
+        </tbody>
+    </table>
+
+    <h3>My Notes</h3>
+    <div class="grid-area" style="height: 50mm;"></div>
+</div>
+
+<!-- SECTION 2: E&M -->
+<div class="page">
+    <h1>Section 2: Physics – Electricity &amp; Magnetism (Q1–Q10)</h1>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q1</span> <span class="badge med">Medium</span> <span class="badge">Circuit / Kirchhoff</span> <span class="badge">8m</span>
+            <div class="q-text">A circuit has $V = 12$ V, with $R_1 = 4\,\Omega$ in series, followed by $R_2 = 6\,\Omega$ and $R_3 = 3\,\Omega$ in parallel. Find the equivalent resistance, total current, and power dissipated by $R_2$.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> First find the parallel equivalent, then add in series.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $R_{23} = 2\,\Omega$, $R_{eq} = 6\,\Omega$, $I = 2$ A, $P_2 \approx 2.67$ W.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q2</span> <span class="badge hard">Hard</span> <span class="badge">Electric Field</span> <span class="badge">10m</span>
+            <div class="q-text">Two charges $q_1 = +2\,\mu C$ and $q_2 = -3\,\mu C$ are placed $0.5$ m apart. Determine the magnitude and direction of the electric field at the midpoint between them ($k = 9 \cdot 10^9$ N·m²/C²).</div>
+            <div class="tip">💡 <strong>Strategy:</strong> Compute each field separately and add vectorially.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $E = E_1 + E_2$ (same direction) $= k(|q_1|+|q_2|)/r^2$ with $r=0.25$ m. $E \approx 7.2 \cdot 10^6$ N/C.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q3</span> <span class="badge med">Medium</span> <span class="badge">Lorentz Force</span> <span class="badge">6m</span>
+            <div class="q-text">A particle with $q = 1.6 \cdot 10^{-19}$ C moves at $v = 3 \cdot 10^6$ m/s perpendicular to a magnetic field $B = 0.2$ T. Find the Lorentz force.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $F = qvB\sin\theta$ with $\theta = 90°$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $F = 9.6 \cdot 10^{-14}$ N.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q4</span> <span class="badge hard">Hard</span> <span class="badge">Induction</span> <span class="badge">10m</span>
+            <div class="q-text">A coil with $N=200$ turns and $A=0.02$ m² is rotated from perpendicular to parallel in a uniform $B=0.4$ T field in $0.1$ s. Find the average induced EMF.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> Faraday's law: $\varepsilon = -N\,\Delta\Phi/\Delta t$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\Delta\Phi = BA = 0.008$ Wb, $\varepsilon_{avg} = 200 \cdot 0.008 / 0.1 = 16$ V.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q5</span> <span class="badge med">Medium</span> <span class="badge">Capacitor</span> <span class="badge">6m</span>
+            <div class="q-text">A $C = 10\,\mu F$ capacitor is charged to $V = 50$ V. Find the stored energy and the charge on one plate.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $Q = CV$, $E = \frac{1}{2}CV^2$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $Q = 5 \cdot 10^{-4}$ C, $E = 0.0125$ J.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q6</span> <span class="badge hard">Hard</span> <span class="badge">Kirchhoff</span> <span class="badge">10m</span>
+            <div class="q-text">Two loops share a common resistor $R_2 = 5\,\Omega$. Loop 1: $V_1 = 10$ V, $R_1 = 2\,\Omega$. Loop 2: $V_2 = 6$ V, $R_3 = 3\,\Omega$. Find the current through $R_2$ using Kirchhoff's laws.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> Write KVL for each loop and KCL at the node.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $I_{R2} = \frac{V_1/R_1 - V_2/R_3}{1/R_1 + 1/R_2 + 1/R_3}$ style; final current depends on chosen directions.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q7</span> <span class="badge med">Medium</span> <span class="badge">Magnetic Field</span> <span class="badge">6m</span>
+            <div class="q-text">Find the magnetic field at $r = 0.1$ m from a long straight wire carrying $I = 5$ A ($\mu_0 = 4\pi\cdot 10^{-7}$ T·m/A).</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $B = \mu_0 I / (2\pi r)$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $B = 10^{-5}$ T.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q8</span> <span class="badge hard">Hard</span> <span class="badge">Potential</span> <span class="badge">8m</span>
+            <div class="q-text">A point charge $q = 5\,\mu C$ is fixed. How much work is required to bring a second charge $q' = 2\,\mu C$ from infinity to a distance of $0.3$ m? ($k = 9\cdot 10^9$).</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $W = k q q' / r$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $W = 0.3$ J.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q9</span> <span class="badge med">Medium</span> <span class="badge">RC Circuit</span> <span class="badge">7m</span>
+            <div class="q-text">An RC circuit has $R = 1\,\text{k}\Omega$ and $C = 1\,\mu F$. Find the time constant $\tau$, and the time to charge to 63% of maximum voltage.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $\tau = RC$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\tau = 10^{-3}$ s = 1 ms.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q10</span> <span class="badge hard">Hard</span> <span class="badge">Magnetic Flux</span> <span class="badge">8m</span>
+            <div class="q-text">A circular loop of radius $r = 0.2$ m is placed in a magnetic field $B = 0.5$ T at $30°$ to the normal. Find the magnetic flux through the loop.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $\Phi = B A \cos\theta$, $A = \pi r^2$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $A \approx 0.1257$ m², $\Phi \approx 0.0544$ Wb.</div>
+        <div class="grid-area"></div>
+    </div>
+</div>
+
+<!-- SECTION 3: THERMO & WAVES -->
+<div class="page">
+    <h1>Section 3: Physics – Thermodynamics &amp; Waves (Q11–Q18)</h1>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q11</span> <span class="badge med">Medium</span> <span class="badge">Ideal Gas</span> <span class="badge">5m</span>
+            <div class="q-text">$2$ mol of an ideal gas at $300$ K occupies $0.05$ m³. Find the pressure ($R = 8.314$ J/mol·K).</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $PV = nRT$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $P \approx 99\,768$ Pa $\approx 1$ atm.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q12</span> <span class="badge hard">Hard</span> <span class="badge">Carnot</span> <span class="badge">8m</span>
+            <div class="q-text">A Carnot engine operates between $500$ K and $300$ K. Find its efficiency and the work done when $1000$ J of heat is absorbed.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $\eta = 1 - T_c/T_h$, $W = \eta \cdot Q_h$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\eta = 0.4$ (40%), $W = 400$ J.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q13</span> <span class="badge med">Medium</span> <span class="badge">First Law</span> <span class="badge">6m</span>
+            <div class="q-text">A gas absorbs $500$ J of heat and does $200$ J of work on the surroundings. Find the change in internal energy.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $\Delta U = Q - W$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\Delta U = 300$ J.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q14</span> <span class="badge easy">Easy</span> <span class="badge">Waves</span> <span class="badge">4m</span>
+            <div class="q-text">A sound wave has frequency $f = 440$ Hz and wavelength $\lambda = 0.75$ m. Find its speed.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $v = f\lambda$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $v = 330$ m/s.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q15</span> <span class="badge med">Medium</span> <span class="badge">Snell</span> <span class="badge">6m</span>
+            <div class="q-text">Light passes from air ($n_1 = 1.0$) into water ($n_2 = 1.33$) at an angle of incidence of $30°$. Find the angle of refraction.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $n_1\sin\theta_1 = n_2\sin\theta_2$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $\sin\theta_2 \approx 0.376 \Rightarrow \theta_2 \approx 22.1°$.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q16</span> <span class="badge hard">Hard</span> <span class="badge">Doppler</span> <span class="badge">8m</span>
+            <div class="q-text">A car moves toward a stationary observer at $30$ m/s while sounding a $500$ Hz horn. Find the observed frequency ($v_{sound} = 340$ m/s).</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $f' = f \cdot \frac{v}{v - v_s}$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $f' \approx 548.4$ Hz.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q17</span> <span class="badge med">Medium</span> <span class="badge">Heat Transfer</span> <span class="badge">6m</span>
+            <div class="q-text">How much heat is needed to raise the temperature of $2$ kg of water from $20°$C to $80°$C? ($c_{water} = 4186$ J/kg·K)</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $Q = mc\Delta T$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $Q = 2 \cdot 4186 \cdot 60 \approx 502\,320$ J.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q18</span> <span class="badge hard">Hard</span> <span class="badge">Standing Waves</span> <span class="badge">7m</span>
+            <div class="q-text">A string of length $L = 1$ m is fixed at both ends. Find the frequency of the 3rd harmonic if the wave speed is $v = 100$ m/s.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> $f_n = \frac{n v}{2L}$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $f_3 = \frac{3 \cdot 100}{2 \cdot 1} = 150$ Hz.</div>
+        <div class="grid-area"></div>
+    </div>
+</div>
+
+<!-- SECTION 4: BIO & CHEM -->
+<div class="page">
+    <h1>Section 4: Biology &amp; Chemistry (Q19–Q28)</h1>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q19</span> <span class="badge bio">Bio</span> <span class="badge easy">Easy</span> <span class="badge">Genetics</span> <span class="badge">5m</span>
+            <div class="q-text">Two heterozygous (Aa) parents have offspring. Give the genotype ratios.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> Punnett square: AA, Aa, Aa, aa.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> 1 AA : 2 Aa : 1 aa (25% / 50% / 25%).</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q20</span> <span class="badge bio">Bio</span> <span class="badge med">Medium</span> <span class="badge">Cell Biology</span> <span class="badge">5m</span>
+            <div class="q-text">What is the main function of mitochondria? Explain briefly.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> ATP production via cellular respiration (energy powerhouse of the cell).</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q21</span> <span class="badge chem">Chem</span> <span class="badge med">Medium</span> <span class="badge">Stoichiometry</span> <span class="badge">8m</span>
+            <div class="q-text">For $2H_2 + O_2 \to 2H_2O$, how many moles of $O_2$ react with 4 mol $H_2$, and how many grams of water form? ($M_{H_2O} = 18$ g/mol)</div>
+            <div class="tip">💡 <strong>Strategy:</strong> Use mole ratio from the equation, then $m = nM$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> 2 mol O₂; 4 mol H₂O = 72 g.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q22</span> <span class="badge chem">Chem</span> <span class="badge hard">Hard</span> <span class="badge">Acid-Base</span> <span class="badge">6m</span>
+            <div class="q-text">Calculate the pH of a $0.01$ M HCl solution.</div>
+            <div class="tip">💡 <strong>Strategy:</strong> Strong acid fully dissociates; $[H^+] = 0.01$ M; $pH = -\log[H^+] = 2$.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> pH = 2.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q23</span> <span class="badge bio">Bio</span> <span class="badge med">Medium</span> <span class="badge">Cell Division</span> <span class="badge">6m</span>
+            <div class="q-text">Describe two key differences between mitosis and meiosis.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> Mitosis: 2 identical diploid cells; meiosis: 4 genetically varied haploid cells. Mitosis for growth/repair; meiosis for gametes.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q24</span> <span class="badge bio">Bio</span> <span class="badge med">Medium</span> <span class="badge">Photosynthesis</span> <span class="badge">6m</span>
+            <div class="q-text">Write the overall equation for photosynthesis and name the two main stages.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> $6CO_2 + 6H_2O + light \to C_6H_{12}O_6 + 6O_2$. Stages: light-dependent reactions and Calvin cycle.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q25</span> <span class="badge chem">Chem</span> <span class="badge hard">Hard</span> <span class="badge">Chemical Bonding</span> <span class="badge">7m</span>
+            <div class="q-text">Explain the difference between ionic, covalent, and metallic bonds. Give one example of each.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> Ionic: e⁻ transfer (NaCl); covalent: e⁻ sharing (H₂O); metallic: delocalized e⁻ (Cu).</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q26</span> <span class="badge bio">Bio</span> <span class="badge med">Medium</span> <span class="badge">DNA</span> <span class="badge">7m</span>
+            <div class="q-text">A DNA sequence has 3000 nucleotides, 20% of which are adenine. How many guanine molecules are present? (Chargaff's rule: A=T, G=C)</div>
+            <div class="tip">💡 <strong>Strategy:</strong> A=T, G=C, percentages sum to 100%.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> A=20% → T=20% → G+C=60% → G=30% → 900 guanine.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q27</span> <span class="badge bio">Bio</span> <span class="badge hard">Hard</span> <span class="badge">Enzymes</span> <span class="badge">7m</span>
+            <div class="q-text">Explain how temperature and pH affect enzyme activity. Include the terms "denaturation" and "optimal conditions".</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> Enzymes have optimal T and pH. Beyond these, structure changes (denaturation) and activity drops sharply.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q28</span> <span class="badge chem">Chem</span> <span class="badge med">Medium</span> <span class="badge">Periodic Trends</span> <span class="badge">7m</span>
+            <div class="q-text">Explain the trends for atomic radius and electronegativity across a period and down a group.</div>
+        </div>
+        <div class="sol-box"><strong>Solution:</strong> Across period: radius decreases, electronegativity increases. Down group: radius increases, electronegativity decreases.</div>
+        <div class="grid-area"></div>
+    </div>
+</div>
+
+<!-- SECTION 5: GERMAN -->
+<div class="page">
+    <h1>Section 5: German – Academic Reading, Grammar &amp; Writing (Q29–Q40)</h1>
+    <p>These questions are at the B2–C1 level, in line with ETH Zürich entrance exam requirements.</p>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q29</span> <span class="badge de">DE</span> <span class="badge hard">Schwer</span> <span class="badge">Leseverstehen</span> <span class="badge">10m</span>
+            <div class="q-text">Lesen Sie den folgenden Text und beantworten Sie die Frage.</div>
+            <div class="q-text"><em>„Die Digitalisierung verändert nicht nur die Arbeitswelt, sondern auch die Art und Weise, wie wir lernen. Während digitale Medien den Zugang zu Wissen erleichtern, warnen Kritiker vor einer Abnahme der Konzentrationsfähigkeit und der sozialen Kompetenzen.“</em></div>
+            <div class="q-text"><strong>Frage:</strong> Welche zwei Aspekte werden im Text gegenübergestellt?</div>
+            <div class="q-text">A) Wirtschaft und Politik<br>B) Vorteile und Risiken der Digitalisierung<br>C) Schule und Universität<br>D) Eltern und Lehrer</div>
+        </div>
+        <div class="sol-box"><strong>Lösung:</strong> B) Vorteile und Risiken der Digitalisierung.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q30</span> <span class="badge de">DE</span> <span class="badge hard">Schwer</span> <span class="badge">Leseverstehen</span> <span class="badge">10m</span>
+            <div class="q-text">Lesen Sie den Text und wählen Sie die beste Antwort.</div>
+            <div class="q-text"><em>„Obwohl künstliche Intelligenz viele Prozesse effizienter gestaltet, bleibt die ethische Verantwortung eine zentrale Herausforderung. Algorithmen können nur so gut sein wie die Daten, mit denen sie trainiert werden.“</em></div>
+            <div class="q-text"><strong>Frage:</strong> Was ist die Hauptaussage des Textes?</div>
+            <div class="q-text">A) KI ist nutzlos.<br>B) KI-Potenzial und ethische Verantwortung müssen zusammengedacht werden.<br>C) Algorithmen sind immer neutral.<br>D) Daten sind irrelevant.</div>
+        </div>
+        <div class="sol-box"><strong>Lösung:</strong> B).</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q31</span> <span class="badge de">DE</span> <span class="badge med">Mittel</span> <span class="badge">Grammatik</span> <span class="badge">5m</span>
+            <div class="q-text">Setzen Sie das richtige Relativpronomen ein:</div>
+            <div class="q-text">„Das ist der Mann, ___ ich gestern gesehen habe.“</div>
+            <div class="q-text">A) der &nbsp; B) den &nbsp; C) dem &nbsp; D) dessen</div>
+            <div class="tip">💡 <strong>Strategie:</strong> „Mann“ ist maskulin, Akkusativ (wen? den).</div>
+        </div>
+        <div class="sol-box"><strong>Lösung:</strong> B) den.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q32</span> <span class="badge de">DE</span> <span class="badge hard">Schwer</span> <span class="badge">Konjunktiv II</span> <span class="badge">6m</span>
+            <div class="q-text">Bilden Sie die Konjunktiv-II-Form:</div>
+            <div class="q-text">„Wenn ich mehr Zeit ___, ___ ich das Buch lesen.“</div>
+            <div class="q-text">A) hätte / würde &nbsp; B) habe / werde &nbsp; C) hatte / wurde &nbsp; D) hätte / werde</div>
+        </div>
+        <div class="sol-box"><strong>Lösung:</strong> A) hätte / würde.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q33</span> <span class="badge de">DE</span> <span class="badge med">Mittel</span> <span class="badge">Passiv</span> <span class="badge">6m</span>
+            <div class="q-text">Bilden Sie das Passiv:</div>
+            <div class="q-text">„Die Forscher entwickeln eine neue Methode.“ → „Eine neue Methode ___ von den Forschern ___.“</div>
+            <div class="q-text">A) ist / entwickelt &nbsp; B) wird / entwickelt &nbsp; C) wurde / entwickelt &nbsp; D) hat / entwickelt</div>
+        </div>
+        <div class="sol-box"><strong>Lösung:</strong> B) wird / entwickelt.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q34</span> <span class="badge de">DE</span> <span class="badge med">Mittel</span> <span class="badge">Präpositionen</span> <span class="badge">5m</span>
+            <div class="q-text">Ergänzen Sie die richtige Präposition:</div>
+            <div class="q-text">„Ich interessiere mich ___ Physik.“</div>
+            <div class="q-text">A) an &nbsp; B) für &nbsp; C) über &nbsp; D) auf</div>
+        </div>
+        <div class="sol-box"><strong>Lösung:</strong> B) für.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q35</span> <span class="badge de">DE</span> <span class="badge hard">Schwer</span> <span class="badge">Adjektivendungen</span> <span class="badge">7m</span>
+            <div class="q-text">Ergänzen Sie die richtige Adjektivendung:</div>
+            <div class="q-text">„Mit ein___ neu___ Methode können wir das Problem lösen.“</div>
+            <div class="q-text">A) -er / -en &nbsp; B) -e / -e &nbsp; C) -en / -en &nbsp; D) -em / -en</div>
+        </div>
+        <div class="sol-box"><strong>Lösung:</strong> A) -er / -en (mit einer neuen Methode).</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q36</span> <span class="badge de">DE</span> <span class="badge med">Mittel</span> <span class="badge">Wortstellung</span> <span class="badge">6m</span>
+            <div class="q-text">Ordnen Sie die Wörter zu einem korrekten Satz:</div>
+            <div class="q-text">„weil / die Prüfung / er / bestanden / hat / schwer / war“</div>
+        </div>
+        <div class="sol-box"><strong>Lösung:</strong> „Er hat die Prüfung bestanden, weil sie schwer war.“</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q37</span> <span class="badge de">DE</span> <span class="badge hard">Schwer</span> <span class="badge">Erörterung</span> <span class="badge">15m</span>
+            <div class="q-text">Schreiben Sie eine kurze Erörterung (ca. 120 Wörter) zum Thema: <em>„Sollten soziale Medien in der Schule verboten werden?“</em> Nennen Sie Pro- und Contra-Argumente und Ihre eigene Meinung.</div>
+            <div class="tip">💡 <strong>Strategie:</strong> Einleitung, Argumente, Gegenargumente, Schluss.</div>
+        </div>
+        <div class="sol-box"><strong>Hinweis:</strong> Freies Schreiben – benutzen Sie die karierte Fläche unten.</div>
+        <div class="grid-area" style="height: 80mm;"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q38</span> <span class="badge de">DE</span> <span class="badge hard">Schwer</span> <span class="badge">Zusammenfassung</span> <span class="badge">15m</span>
+            <div class="q-text">Fassen Sie folgenden Text in 3–4 Sätzen zusammen:</div>
+            <div class="q-text"><em>„Der Klimawandel stellt eine der größten Herausforderungen des 21. Jahrhunderts dar. Wissenschaftler warnen vor steigenden Temperaturen, Extremwetterereignissen und dem Anstieg des Meeresspiegels. Um die Folgen zu mildern, sind internationale Kooperationen und technologische Innovationen notwendig. Gleichzeitig müssen soziale und wirtschaftliche Ungleichheiten berücksichtigt werden.“</em></div>
+        </div>
+        <div class="sol-box"><strong>Hinweis:</strong> Freies Schreiben.</div>
+        <div class="grid-area" style="height: 50mm;"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q39</span> <span class="badge de">DE</span> <span class="badge med">Mittel</span> <span class="badge">Partizipien</span> <span class="badge">6m</span>
+            <div class="q-text">Bilden Sie das Partizip II:</div>
+            <div class="q-text">„lesen“ → ___ ; „schreiben“ → ___ ; „verstehen“ → ___</div>
+        </div>
+        <div class="sol-box"><strong>Lösung:</strong> gelesen / geschrieben / verstanden.</div>
+        <div class="grid-area"></div>
+    </div>
+
+    <div class="question-block">
+        <div class="q-box">
+            <span class="badge topic">Q40</span> <span class="badge de">DE</span> <span class="badge hard">Schwer</span> <span class="badge">Textanalyse</span> <span class="badge">10m</span>
+            <div class="q-text">Analysieren Sie den folgenden Satz: <em>„Je mehr wir über KI wissen, desto wichtiger wird die Frage nach Verantwortung.“</em> Erklären Sie die grammatische Struktur und die Bedeutung.</div>
+            <div class="tip">💡 <strong>Strategie:</strong> „je … desto …“ ist eine Korrelation; beide Teile haben eigene Wortstellung.</div>
+        </div>
+        <div class="sol-box"><strong>Lösung:</strong> „Je mehr …, desto wichtiger …“ = proportional relationship. „Je“-clause: verb at end; „desto“-clause: verb second.</div>
+        <div class="grid-area"></div>
+    </div>
+</div>
+
+<!-- ANSWER KEY -->
+<div class="page">
+    <h1>Answer Key (Q1 – Q40)</h1>
+    <table style="font-size: 0.78em;">
+        <thead><tr><th>Q</th><th>Answer</th><th>Q</th><th>Answer</th><th>Q</th><th>Answer</th><th>Q</th><th>Answer</th></tr></thead>
+        <tbody>
+            <tr><td>Q1</td><td>$R_{eq}=6\,\Omega$, $I=2$ A, $P_2=2.67$ W</td><td>Q11</td><td>$\approx 1$ atm</td><td>Q21</td><td>2 mol O₂; 72 g H₂O</td><td>Q31</td><td>B) den</td></tr>
+            <tr><td>Q2</td><td>$E \approx 7.2\cdot 10^6$ N/C</td><td>Q12</td><td>$\eta=0.4$, $W=400$ J</td><td>Q22</td><td>pH = 2</td><td>Q32</td><td>A) hätte / würde</td></tr>
+            <tr><td>Q3</td><td>$9.6\cdot 10^{-14}$ N</td><td>Q13</td><td>$\Delta U = 300$ J</td><td>Q23</td><td>Mitosis vs meiosis</td><td>Q33</td><td>B) wird / entwickelt</td></tr>
+            <tr><td>Q4</td><td>$16$ V</td><td>Q14</td><td>$330$ m/s</td><td>Q24</td><td>$6CO_2 + 6H_2O \to C_6H_{12}O_6 + 6O_2$</td><td>Q34</td><td>B) für</td></tr>
+            <tr><td>Q5</td><td>$Q=5\cdot 10^{-4}$ C, $E=0.0125$ J</td><td>Q15</td><td>$\theta_2 \approx 22.1°$</td><td>Q25</td><td>Ionic / covalent / metallic</td><td>Q35</td><td>A) -er / -en</td></tr>
+            <tr><td>Q6</td><td>Kirchhoff solution</td><td>Q16</td><td>$f' \approx 548.4$ Hz</td><td>Q26</td><td>900 guanine</td><td>Q36</td><td>„Er hat die Prüfung bestanden, weil sie schwer war.“</td></tr>
+            <tr><td>Q7</td><td>$B = 10^{-5}$ T</td><td>Q17</td><td>$Q \approx 502\,320$ J</td><td>Q27</td><td>Optimal T/pH, denaturation</td><td>Q37</td><td>Free writing</td></tr>
+            <tr><td>Q8</td><td>$W = 0.3$ J</td><td>Q18</td><td>$150$ Hz</td><td>Q28</td><td>Trends explained</td><td>Q38</td><td>Free writing</td></tr>
+            <tr><td>Q9</td><td>$\tau = 1$ ms</td><td>Q19</td><td>1:2:1</td><td>Q29</td><td>B) Vorteile &amp; Risiken</td><td>Q39</td><td>gelesen / geschrieben / verstanden</td></tr>
+            <tr><td>Q10</td><td>$\Phi \approx 0.0544$ Wb</td><td>Q20</td><td>ATP production</td><td>Q30</td><td>B) KI-Potenzial &amp; Ethik</td><td>Q40</td><td>„je…desto…“ proportional</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- REFERENCES -->
+<div class="page">
+    <h1>References &amp; Copyright Notice</h1>
+    <ul style="font-size: 0.88em; color: #555;">
+        <li>This study material is <strong>not</strong> an official ETH Zürich document. It is an independent preparation guide.</li>
+        <li><strong>Questions:</strong> All questions are <strong>original and adapted</strong> problems in the ETH/Matura style. Copyrighted exam questions have not been reproduced verbatim.</li>
+        <li><strong>References:</strong> ETH Aufnahmeprüfung archive, GitHub <em>janikschuettler/eth-entrance-exam</em>, Halliday–Resnick, Tipler–Mosca, Campbell <em>Biology</em>, Atkins <em>Chemistry</em>, Goethe-Institut materials.</li>
+        <li><strong>Typesetting:</strong> MathJax (Apache 2.0) CDN.</li>
+        <li><strong>License:</strong> This document may be distributed freely. Commercial sale is not permitted.</li>
+        <li><strong>Contact:</strong> Prepared by FFWeath with the help of ai tools (September 2026).</li>
+    </ul>
+</div>
+
+</div>
+</body>
+</html>
